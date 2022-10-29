@@ -4,7 +4,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class BoxMouseAdapter extends MouseAdapter {
-
     private BoxPanel boxPanel;
 
     public BoxMouseAdapter(BoxPanel boxPanel) {
