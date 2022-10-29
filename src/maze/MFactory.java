@@ -13,5 +13,4 @@ public class MFactory implements MazeFactory {
         return new Maze(height, width);
     }
 
-
 }
