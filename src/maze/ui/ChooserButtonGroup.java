@@ -41,7 +41,6 @@ public class ChooserButtonGroup extends JPanel {
         add(Box.createRigidArea(new Dimension(0, 10)));
         add(new ClearShortestPathButton(mazeEditor));
 
-
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
     }
 }

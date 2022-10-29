@@ -3,10 +3,6 @@ z
 J.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_0.xml,6/3/637cdab747eb73c36506f8ac53aa61e89fff1f0f
 t
 D.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_0.xml,e/a/ea1cd26f0e3fe8192f59c8a58b40bebe6b1da07d
-i
-9.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml,b/8/b8d96649614bd84192f3496ef7d33bab1d1e5ec1
-]
--.idea/libraries/Maven__junit_junit_4_13_2.xml,5/4/54f4510b91c2683595ce2e8f36b90b301f51d8d3
 p
 @.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml,7/8/78b158d79d4a615b8bf614d6ee88675e25eba276
 j
@@ -37,65 +33,29 @@ T
 $src/graph/impl/BasicVertexesSet.java,c/7/c7f778ef55b6b52a700e8840c915193403c4e1dc
 I
 src/maze/ui/BoxPanel.java,1/0/102f9979ca0398acbd3d441bf15c1202d0645b7b
-S
-#src/maze/ui/ChooserButtonGroup.java,e/d/ed489d67236b1cde00221bdb20e11fcd2a9a126b
-R
-"src/maze/ui/ClearMazeMenuItem.java,4/c/4ce8c0f060ea54df46f94b3363467ca03704dc4f
 X
 (src/maze/ui/ClearShortestPathButton.java,7/b/7baa2dc30a043035c35662f80979d7ca717d20b5
-B
-src/maze/DBox.java,e/0/e09500605c455eadb3b24f968c165827051f1d69
 S
 #src/maze/ui/DepartureBoxButton.java,5/7/579c2a90fe4335a3b81f9df060bacde7ec35e567
 O
-src/maze/ui/DrawingMenuBar.java,9/4/944b618d9e03d5c5839b75fced5d50c6ae807b06
-O
 src/maze/ui/EmptyBoxButton.java,d/f/df67bcd8f205ed758b83549684a6a85c73a56bb1
-I
-src/maze/ui/FileMenu.java,6/0/60e39c5ebe563745c9d475bee8f7b8637833c101
-P
- src/maze/model/MazeBoxModel.java,8/a/8a7d79878fbf8d6c2288fc1e7e0c5554f7fd6c9f
-O
-src/maze/model/MazeFactory.java,5/0/50c9087eabc7bd5b88c64efb939aa3172e0a38b0
-I
-src/maze/ui/MazeMenu.java,9/4/94ab632d600b45611343d46e2da1bc22a8487578
-M
-src/maze/model/MazeModel.java,7/3/7377443d845b270914bb160e9282984cca88f0ab
 J
 src/maze/ui/MazePanel.java,0/9/09bc9a6123b250666090756c598307732ed5ce46
 J
 src/graph/MinDistance.java,8/7/878944ce6478ec4195137b6fcf57470d66093039
 Q
 !src/maze/model/ModelObserver.java,a/0/a03233cf937d474f33ba401773811f4e6cc6d84f
-J
-src/maze/ui/MusicTest.java,5/e/5ebae66881378028d8b77c675384a509dd3bac10
-P
- src/maze/ui/NewMazeMenuItem.java,d/5/d57f2bd3241e0b77d41eebd603b52e14e1a98481
 [
 +src/graph/NotAdjacentVerticesException.java,7/a/7a64749b7c28f4a2f7c36b8c79fb3a7faeb4094d
 S
 #src/graph/ProcessedVertexesSet.java,f/6/f6bc7dd1ef9174476c701de1eac4ef259e6e8e04
-M
-src/maze/ui/QuitMenuItem.java,1/3/13abed348495ee7824ebfdb97895033b89fece92
 J
 src/maze/ui/RootPanel.java,6/6/66d23542a8415ebb50f9adad05f2b42edab1c5ee
-O
-src/maze/ui/SaveAsMenuItem.java,9/a/9a7921534dc1fd04ce0ba22e83bbf108b31033b7
-M
-src/maze/ui/SaveMenuItem.java,9/4/94fe36497fc01885b01b09e6639c7a6b3b54472b
 L
 src/graph/ShortestPaths.java,1/4/14a873ca97b98b7cde6904954117c0e86c475958
-P
- src/maze/ui/SolveMazeButton.java,c/0/c0df8df5ba1e73577bcaff67aa5c1dcbc3011010
 E
 src/graph/Vertex.java,d/3/d392de9274054625ba12955a7297d2b6f327ad59
 N
 src/maze/ui/WallBoxButton.java,1/c/1c4732f84d8e4edcf7f818f5f803af621ae91fc6
 F
 src/maze/MFactory.java,b/c/bc46449277b70001de757b7136ecaf3a962b1b30
-Q
-!src/maze/ui/ArrivalBoxButton.java,7/1/71c70f9bd5874a1e3015ac8fe8012121cb43ac88
-B
-src/maze/WBox.java,4/9/49ab003d3a5f436a252c8c85c584b22bb484a7da
-K
-src/maze/ui/MazeEditor.java,b/9/b96b1e603946f67aaaa719f029ea597273d72544

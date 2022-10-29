@@ -1,15 +1,19 @@
 package maze.ui;
 
+import lombok.SneakyThrows;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-@SuppressWarnings("serial")
 public class OpenFileMenuItem extends JMenuItem implements ActionListener {
 
+    public static int width = 10;
+    public static int height = 10;
     private final MazeEditor mazeEditor;
+    private File repertoireCourant;
 
     public OpenFileMenuItem(MazeEditor drawingMaze) {
         super("Open from file");
@@ -17,23 +21,26 @@ public class OpenFileMenuItem extends JMenuItem implements ActionListener {
         this.mazeEditor = drawingMaze;
 
         addActionListener(this);
-
-        // TODO
-        setEnabled(false);
+        setEnabled(true);
     }
 
+    @SneakyThrows
     @Override
     public void actionPerformed(ActionEvent evt) {
-        JFileChooser chooser = new JFileChooser(); //This class enable us to open a file explorer for a more ergonomic design.
+
+        repertoireCourant = new File(".").getCanonicalFile();
+        JFileChooser chooser = new JFileChooser(repertoireCourant + "/data");
         FileNameExtensionFilter filter = new FileNameExtensionFilter(
                 "text only", "txt");
         chooser.setFileFilter(filter);
         chooser.setDialogType(JFileChooser.OPEN_DIALOG);
         int returnVal = chooser.showOpenDialog(mazeEditor);
+        File file = null;
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file = chooser.getSelectedFile();
+            file = chooser.getSelectedFile();
             System.out.println("You chose to open this file: " + file.getName());
-
         }
+        mazeEditor.getMaze().initFromTextFile(file);
     }
 }
+

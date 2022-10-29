@@ -81,14 +81,6 @@ public class MazeEditor extends JFrame implements ModelObserver {
         setModified(true);
     }
 
-	/* public final void MazeOquebec() {
-
-		setMaze(getMaze().getMazeFactory().createMazeModel(10,10)); //42 X 60
-		
-		
-
-	} */
-
     public final MazeModel getMaze() {
         return maze;
     }

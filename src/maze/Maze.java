@@ -4,20 +4,26 @@ import graph.*;
 import graph.impl.BasicMinDistance;
 import graph.impl.BasicShortestPaths;
 import graph.impl.BasicVertexesSet;
+import lombok.SneakyThrows;
 import maze.model.MazeBoxModel;
 import maze.model.MazeFactory;
 import maze.model.MazeModel;
 import maze.model.ModelObserver;
+import mazeReadingException.MazeReadingException;
 
+import javax.swing.*;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Maze implements Graph, MazeModel, Distance {
+import static maze.ui.OpenFileMenuItem.height;
 
+public class Maze implements Graph, MazeModel, Distance {
     private final Set<ModelObserver> observers;
     MBox[][] maze;
+    private BufferedReader bufferRead;
     private MFactory mfactory;
     private ShortestPaths shortestPaths;
     private int length;
@@ -40,10 +46,7 @@ public class Maze implements Graph, MazeModel, Distance {
 
                 MBox Box = new EBox(i, j, this);
                 maze[i][j] = Box;
-                System.out.print(maze[i][j] + "\t");
             }
-
-            System.out.println();
         }
     }
 
@@ -94,49 +97,42 @@ public class Maze implements Graph, MazeModel, Distance {
         }
 
         if ((X == 0) && (Y == 0)) {
-            MBox closeBox = maze[X][Y + 1];
             if (!(maze[X][Y + 1] instanceof WBox)) {
                 SuccVertex.add((Vertex) maze[X][Y + 1]);
             }
         }
 
         if ((X == 0) && (Y == this.width)) {
-            MBox closeBox = maze[X + 1][Y];
             if (!(maze[X + 1][Y] instanceof WBox)) {
                 SuccVertex.add((Vertex) maze[X + 1][Y]);
             }
         }
 
         if ((X == 0) && (Y == this.width)) {
-            MBox closeBox = maze[X][Y - 1];
             if (!(maze[X][Y - 1] instanceof WBox)) {
                 SuccVertex.add((Vertex) maze[X][Y - 1]);
             }
         }
 
         if ((X == this.width) && (Y == 0)) {
-            MBox closeBox = maze[X][Y + 1];
             if (!(maze[X][Y + 1] instanceof WBox)) {
                 SuccVertex.add((Vertex) maze[X][Y + 1]);
             }
         }
 
         if ((X == this.width) && (Y == 0)) {
-            MBox closeBox = maze[X - 1][Y];
             if (!(maze[X - 1][Y] instanceof WBox)) {
                 SuccVertex.add((Vertex) maze[X - 1][Y]);
             }
         }
 
         if ((X == this.length) && (Y == this.width)) {
-            MBox closeBox = maze[X - 1][Y];
             if (!(maze[X - 1][Y] instanceof WBox)) {
                 SuccVertex.add((Vertex) maze[X - 1][Y]);
             }
         }
 
         if ((X == this.length) && (Y == this.width)) {
-            MBox closeBox = maze[X][Y - 1];
             if (!(maze[X][Y - 1] instanceof WBox)) {
                 SuccVertex.add((Vertex) (maze[X][Y - 1]));
             }
@@ -328,14 +324,119 @@ public class Maze implements Graph, MazeModel, Distance {
     @Override
     public void addObserver(ModelObserver observer) {
 
-
         observers.add(observer);
-
     }
 
     @Override
     public boolean removeObserver(ModelObserver observer) {
         return observers.remove(observer);
+    }
+
+    @SneakyThrows
+    @Override
+    public void saveToTextFile(File file) {
+
+        PrintWriter pw = null;
+
+        JFrame jFrame = null;
+        try {
+            pw = new PrintWriter(file);
+            jFrame = new JFrame();
+            for (int lineNo = 0; lineNo < height; lineNo++) {
+                MBox[] line = maze[lineNo];
+
+                for (int colNo = 0; colNo < width; colNo++)
+                    line[colNo].writeCharTo(pw);
+                pw.println();
+            }
+
+            JOptionPane.showMessageDialog(jFrame, "Sauvegarde effectuée");
+
+        } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(jFrame, "Fichier non trouvé");
+            System.err.println("Error class Maze,saveToTextFile:file not found \"" + file + "\"");
+
+        } catch (SecurityException e) {
+            JOptionPane.showMessageDialog(jFrame, "Probléme d'autorisations requises pour accéder à une ressource");
+            System.err.println("error class Maze,saveToextFile: secrit exception \"" + file + "\"");
+
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(jFrame, "Error : unknown error.");
+            System.err.println("Error : unknown error.");
+            ex.printStackTrace(System.err);
+
+        } finally {
+            if (pw != null) try {
+                pw.close();
+            } catch (Exception e) {
+            }
+        }
+    }
+
+    @SneakyThrows
+    @Override
+    public MBox[][] initFromTextFile(File file) {
+        FileInputStream fstream = new FileInputStream(file);
+        bufferRead = new BufferedReader(new InputStreamReader(fstream));
+
+        int heightLineNo = 0;
+        String line = bufferRead.readLine();
+        if (line != null) {
+            width = line.length();
+        }
+        while (line != null) {
+            line = bufferRead.readLine();
+            heightLineNo++;
+        }
+        height = heightLineNo;
+        JFrame jFrame = new JFrame();
+
+        if (height == 0) {
+            JOptionPane.showMessageDialog(jFrame, "labyrinthe sans solution résultat");
+        }
+
+        fstream.getChannel().position(0);
+        bufferRead = new BufferedReader(new InputStreamReader(fstream));
+
+        for (int lineNo = 0; lineNo < height; lineNo++) {
+            line = bufferRead.readLine();
+
+            if (line == null) {
+                JOptionPane.showMessageDialog(jFrame, "Pas assez de ligne");
+                throw new MazeReadingException(file.getName(), lineNo, "Pas assez de ligne");
+            }
+            if (line.length() < width) {
+                JOptionPane.showMessageDialog(jFrame, "Ligne trop courte");
+                throw new MazeReadingException(file.getName(), lineNo, "ligne trop court");
+            }
+            if (line.length() > width) {
+                JOptionPane.showMessageDialog(jFrame, "Ligne trop longue");
+                throw new MazeReadingException(file.getName(), lineNo, "ligne trop longue");
+            }
+
+            for (int colNo = 0; colNo < width; colNo++) {
+                switch (line.charAt(colNo)) {
+                    case 'D':
+                        maze[lineNo][colNo] = new DBox(lineNo, colNo, this);
+                        break;
+                    case 'A':
+                        maze[lineNo][colNo] = new ABox(lineNo, colNo, this);
+                        break;
+                    case 'W':
+                        maze[lineNo][colNo] = new WBox(lineNo, colNo, this);
+                        break;
+                    case 'E':
+                        maze[lineNo][colNo] = new EBox(lineNo, colNo, this);
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(jFrame, "Caractére inconnu => mauvais fichier");
+                        throw new MazeReadingException(file.getName(), lineNo, "Caractére inconnu" + maze[lineNo][colNo] + "'");
+
+                }
+            }
+        }
+        return maze;
     }
 
     protected void notifyObservers() {

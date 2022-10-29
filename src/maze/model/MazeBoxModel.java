@@ -1,5 +1,7 @@
 package maze.model;
 
+import java.io.PrintWriter;
+
 /**
  * Interface providing various methods required for displaying a maze box in a maze editor.
  *
@@ -61,4 +63,6 @@ public interface MazeBoxModel {
      * @return <code>true</code> if this box belongs to the shortest path, false otherwise.
      */
     boolean belongsToShortestPath();
+
+    void writeCharTo(PrintWriter pw);
 }

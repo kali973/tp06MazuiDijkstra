@@ -1,5 +1,7 @@
 package maze;
 
+import java.io.PrintWriter;
+
 public class WBox extends MBox {
 
 
@@ -12,6 +14,11 @@ public class WBox extends MBox {
     public boolean isWall() {
         // TODO Auto-generated method stub
         return true;
+    }
+
+    @Override
+    public void writeCharTo(PrintWriter pw) {
+
     }
 
 }

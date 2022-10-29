@@ -13,7 +13,6 @@ public class QuitMenuItem extends JMenuItem implements ActionListener {
         super("Quit");
 
         this.mazeEditor = drawingMaze;
-
         addActionListener(this);
     }
 

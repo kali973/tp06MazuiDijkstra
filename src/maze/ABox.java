@@ -1,5 +1,7 @@
 package maze;
 
+import java.io.PrintWriter;
+
 public class ABox extends MBox {
 
 
@@ -12,6 +14,11 @@ public class ABox extends MBox {
     public boolean isArrival() {
         // TODO Auto-generated method stub
         return true;
+    }
+
+    @Override
+    public void writeCharTo(PrintWriter pw) {
+
     }
 
 }

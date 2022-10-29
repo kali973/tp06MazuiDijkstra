@@ -1,5 +1,8 @@
 package maze.model;
 
+import maze.MBox;
+
+import java.io.File;
 import java.util.List;
 
 /**
@@ -86,4 +89,8 @@ public interface MazeModel {
      * @return <code>true</code> if this observer was actually removed, false otherwise.
      */
     boolean removeObserver(ModelObserver observer);
+
+    void saveToTextFile(File file);
+
+    MBox[][] initFromTextFile(File file);
 }
