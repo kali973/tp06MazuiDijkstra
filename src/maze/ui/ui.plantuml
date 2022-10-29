@@ -1,0 +1,337 @@
+@startuml
+
+title __UI's Class Diagram__\n
+
+  namespace maze {
+    namespace ui {
+      abstract class maze.ui.AbstractBoxTypeRadioButton {
+          + AbstractBoxTypeRadioButton()
+          + actionPerformed()
+          {abstract} + setBoxModelType()
+          # setModified()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.ArrivalBoxButton {
+          + ArrivalBoxButton()
+          + setBoxModelType()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.BoxMouseAdapter {
+          + BoxMouseAdapter()
+          + mousePressed()
+          - getMazePanel()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.BoxPanel {
+          - colIndex : int
+          - rowIndex : int
+          + BoxPanel()
+          + getMaximumSize()
+          + getMazeBox()
+          + getMinimumSize()
+          + getPreferredSize()
+          + notifyForUpdate()
+          + repaint()
+          # getMazePanel()
+          - getBoxColor()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.ChooserButtonGroup {
+          + ChooserButtonGroup()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.ClearMazeMenuItem {
+          + ClearMazeMenuItem()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.ClearShortestPathButton {
+          + ClearShortestPathButton()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.DepartureBoxButton {
+          + DepartureBoxButton()
+          + setBoxModelType()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.DrawingMenuBar {
+          + DrawingMenuBar()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.EmptyBoxButton {
+          + EmptyBoxButton()
+          + setBoxModelType()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.FileMenu {
+          + FileMenu()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.InformationMazeMenuItem {
+          + InformationMazeMenuItem()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.MazeEditor {
+          - editing : boolean
+          - modified : boolean
+          + MazeEditor()
+          + getMaze()
+          + getRootPanel()
+          + isModified()
+          + modelStateChanged()
+          + newMaze()
+          + setModified()
+          # close()
+          # isEditing()
+          # setEditing()
+          # solveMaze()
+          - handleModified()
+          - setMaze()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.MazeMenu {
+          + MazeMenu()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.MazePanel {
+          - boxPanels : BoxPanel[][]
+          + MazePanel()
+          + getBox()
+          + getBoxPanels()
+          + getMinimumSize()
+          + getSelectedBoxTypeButton()
+          + notifyForUpdate()
+          + setModified()
+          + setSelectedBoxTypeButton()
+          # computePreferredBoxSize()
+          # isEditing()
+          # setEditing()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.MusicTest {
+          + RunMusic()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.NewMazeMenuItem {
+          + NewMazeMenuItem()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.OpenFileMenuItem {
+          + OpenFileMenuItem()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.QuitMenuItem {
+          + QuitMenuItem()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.RootPanel {
+          + RootPanel()
+          + notifyForUpdate()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.SaveAsMenuItem {
+          + SaveAsMenuItem()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.SaveMenuItem {
+          + SaveMenuItem()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.SolveMazeButton {
+          + SolveMazeButton()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.WallBoxButton {
+          + WallBoxButton()
+          + setBoxModelType()
+      }
+    }
+  }
+  
+
+  maze.ui.AbstractBoxTypeRadioButton .up.|> java.awt.event.ActionListener
+  maze.ui.AbstractBoxTypeRadioButton -up-|> javax.swing.JRadioButton
+  maze.ui.AbstractBoxTypeRadioButton o-- maze.ui.MazePanel : mazePanel
+  maze.ui.ArrivalBoxButton .up.|> java.awt.event.ActionListener
+  maze.ui.ArrivalBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
+  maze.ui.BoxMouseAdapter -up-|> java.awt.event.MouseAdapter
+  maze.ui.BoxMouseAdapter o-- maze.ui.BoxPanel : boxPanel
+  maze.ui.BoxPanel -up-|> javax.swing.JPanel
+  maze.ui.BoxPanel o-- maze.model.MazeModel : mazeModel
+  maze.ui.ChooserButtonGroup -up-|> javax.swing.JPanel
+  maze.ui.ClearMazeMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.ClearMazeMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.ClearMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.ClearShortestPathButton .up.|> java.awt.event.ActionListener
+  maze.ui.ClearShortestPathButton -up-|> javax.swing.JButton
+  maze.ui.ClearShortestPathButton o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.DepartureBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
+  maze.ui.DrawingMenuBar -up-|> javax.swing.JMenuBar
+  maze.ui.EmptyBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
+  maze.ui.FileMenu -up-|> javax.swing.JMenu
+  maze.ui.InformationMazeMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.InformationMazeMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.InformationMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.MazeEditor .up.|> maze.model.ModelObserver
+  maze.ui.MazeEditor -up-|> javax.swing.JFrame
+  maze.ui.MazeEditor o-- maze.model.MazeModel : maze
+  maze.ui.MazeEditor o-- maze.ui.RootPanel : rootPanel
+  maze.ui.MazeMenu -up-|> javax.swing.JMenu
+  maze.ui.MazePanel -up-|> javax.swing.JPanel
+  maze.ui.MazePanel o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.MazePanel o-- maze.ui.AbstractBoxTypeRadioButton : selectedBoxTypeButton
+  maze.ui.NewMazeMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.NewMazeMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.NewMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.OpenFileMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.OpenFileMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.OpenFileMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.QuitMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.QuitMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.QuitMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.RootPanel -up-|> javax.swing.JPanel
+  maze.ui.RootPanel o-- maze.ui.ChooserButtonGroup : chooserButtonGroup
+  maze.ui.RootPanel o-- maze.ui.MazePanel : mazePanel
+  maze.ui.SaveAsMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.SaveAsMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.SaveAsMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.SaveMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.SaveMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.SaveMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.SolveMazeButton .up.|> java.awt.event.ActionListener
+  maze.ui.SolveMazeButton -up-|> javax.swing.JButton
+  maze.ui.SolveMazeButton o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.WallBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

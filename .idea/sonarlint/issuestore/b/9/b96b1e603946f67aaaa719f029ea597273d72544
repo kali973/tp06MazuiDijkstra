@@ -1,0 +1,10 @@
+
+m
+java:S1301w"KReplace this "switch" statement by "if" statements to increase readability.(§Í‡­ùÿÿÿÿ8Ï½Ð’Â0
+]	java:S125"<This block of commented-out lines of code should be removed.(³Ì“–ýÿÿÿÿ8á½Ð’Â0
+B
+java:S1948"&Make "maze" transient or serializable.(ß‘þh8è½Ð’Â0
+l
+java:S3252&"OUse static access with "javax.swing.WindowConstants" for "DO_NOTHING_ON_CLOSE".(’¡¿8ï½Ð’Â0
+X	java:S125T"<This block of commented-out lines of code should be removed.(ÖãÚñ8ù½Ð’Â0
+C	java:S131w""Add a default case to this switch.(§Í‡­ùÿÿÿÿ8ý½Ð’Â0

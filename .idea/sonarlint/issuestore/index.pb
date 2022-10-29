@@ -47,12 +47,8 @@ B
 src/maze/DBox.java,e/0/e09500605c455eadb3b24f968c165827051f1d69
 S
 #src/maze/ui/DepartureBoxButton.java,5/7/579c2a90fe4335a3b81f9df060bacde7ec35e567
-G
-src/graph/Dijkstra.java,7/0/7094ad3ba2a44b2c15eabd1adfdd1b0e8d26258f
 O
 src/maze/ui/DrawingMenuBar.java,9/4/944b618d9e03d5c5839b75fced5d50c6ae807b06
-B
-src/maze/EBox.java,2/e/2e83ba2fa32a9f2649a903f59a12dfb47587d1e2
 O
 src/maze/ui/EmptyBoxButton.java,d/f/df67bcd8f205ed758b83549684a6a85c73a56bb1
 I
@@ -67,8 +63,6 @@ M
 src/maze/model/MazeModel.java,7/3/7377443d845b270914bb160e9282984cca88f0ab
 J
 src/maze/ui/MazePanel.java,0/9/09bc9a6123b250666090756c598307732ed5ce46
-B
-src/maze/MBox.java,6/d/6d1243741fb8957004c1b131d01dec60eb77ea31
 J
 src/graph/MinDistance.java,8/7/878944ce6478ec4195137b6fcf57470d66093039
 Q
@@ -101,8 +95,6 @@ F
 src/maze/MFactory.java,b/c/bc46449277b70001de757b7136ecaf3a962b1b30
 Q
 !src/maze/ui/ArrivalBoxButton.java,7/1/71c70f9bd5874a1e3015ac8fe8012121cb43ac88
-B
-src/maze/ABox.java,8/4/8446c19418b78bc9bac1a8f4eae2ae37a6b04041
 B
 src/maze/WBox.java,4/9/49ab003d3a5f436a252c8c85c584b22bb484a7da
 K

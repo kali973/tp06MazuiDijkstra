@@ -1,0 +1,627 @@
+@startuml
+
+title __TP06MAZUIDIJKSTRA's Class Diagram__\n
+
+  namespace graph {
+    class graph.Dijkstra {
+    }
+  }
+  
+
+  namespace graph {
+    class graph.Dijkstra {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.Distance {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.Distance {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.Graph {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.Graph {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.MinDistance {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.MinDistance {
+    }
+  }
+  
+
+  namespace graph {
+    class graph.NotAdjacentVerticesException {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.ProcessedVertexesSet {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.ProcessedVertexesSet {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.ShortestPaths {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.ShortestPaths {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.Vertex {
+    }
+  }
+  
+
+  namespace graph {
+    interface graph.Vertex {
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicEdge {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicEdge {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicGraph {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicGraph {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicMinDistance {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicMinDistance {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicShortestPaths {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicShortestPaths {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicVertex {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicVertex {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicVertexesSet {
+      }
+    }
+  }
+  
+
+  namespace graph {
+    namespace impl {
+      class graph.impl.BasicVertexesSet {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    class maze.ABox {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.ABox {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.DBox {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.DBox {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.EBox {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.EBox {
+    }
+  }
+  
+
+  namespace maze {
+    abstract class maze.MBox {
+    }
+  }
+  
+
+  namespace maze {
+    abstract class maze.MBox {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.MFactory {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.MFactory {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.Maze {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.Maze {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.SoundHandler {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.WBox {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.WBox {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.main {
+    }
+  }
+  
+
+  namespace maze {
+    class maze.main {
+    }
+  }
+  
+
+  namespace maze {
+    namespace model {
+      interface maze.model.MazeBoxModel {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace model {
+      interface maze.model.MazeFactory {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace model {
+      interface maze.model.MazeModel {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace model {
+      interface maze.model.ModelObserver {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      abstract class maze.ui.AbstractBoxTypeRadioButton {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.ArrivalBoxButton {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.BoxMouseAdapter {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.BoxPanel {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.ChooserButtonGroup {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.ClearMazeMenuItem {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.ClearShortestPathButton {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.DepartureBoxButton {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.DrawingMenuBar {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.EmptyBoxButton {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.FileMenu {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.InformationMazeMenuItem {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.MazeEditor {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.MazeMenu {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.MazePanel {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.MusicTest {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.NewMazeMenuItem {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.OpenFileMenuItem {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.QuitMenuItem {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.RootPanel {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.SaveAsMenuItem {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.SaveMenuItem {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.SolveMazeButton {
+      }
+    }
+  }
+  
+
+  namespace maze {
+    namespace ui {
+      class maze.ui.WallBoxButton {
+      }
+    }
+  }
+  
+
+  graph.impl.BasicEdge o-- graph.Vertex : vertex1
+  graph.impl.BasicEdge o-- graph.Vertex : vertex2
+  graph.impl.BasicEdge o-- graph.Vertex : vertex1
+  graph.impl.BasicEdge o-- graph.Vertex : vertex2
+  graph.impl.BasicGraph .up.|> graph.Distance
+  graph.impl.BasicGraph .up.|> graph.Graph
+  graph.impl.BasicGraph .up.|> graph.Distance
+  graph.impl.BasicGraph .up.|> graph.Graph
+  graph.impl.BasicMinDistance .up.|> graph.MinDistance
+  graph.impl.BasicMinDistance .up.|> graph.MinDistance
+  graph.impl.BasicShortestPaths .up.|> graph.ShortestPaths
+  graph.impl.BasicShortestPaths .up.|> graph.ShortestPaths
+  graph.impl.BasicVertex .up.|> graph.Vertex
+  graph.impl.BasicVertex o-- graph.Graph : graph
+  graph.impl.BasicVertex .up.|> graph.Vertex
+  graph.impl.BasicVertex o-- graph.Graph : graph
+  graph.impl.BasicVertexesSet .up.|> graph.ProcessedVertexesSet
+  graph.impl.BasicVertexesSet .up.|> graph.ProcessedVertexesSet
+  maze.ABox -up-|> maze.MBox
+  maze.ABox -up-|> maze.MBox
+  maze.DBox -up-|> maze.MBox
+  maze.DBox -up-|> maze.MBox
+  maze.EBox -up-|> maze.MBox
+  maze.EBox -up-|> maze.MBox
+  maze.MBox .up.|> graph.Vertex
+  maze.MBox .up.|> maze.model.MazeBoxModel
+  maze.MBox o-- maze.Maze : maze
+  maze.MBox .up.|> fr.tp.maze.model.MazeBoxModel
+  maze.MBox .up.|> graph.Vertex
+  maze.MBox o-- maze.Maze : maze
+  maze.MFactory .up.|> maze.model.MazeFactory
+  maze.MFactory .up.|> fr.tp.maze.model.MazeFactory
+  maze.Maze .up.|> graph.Distance
+  maze.Maze .up.|> graph.Graph
+  maze.Maze .up.|> maze.model.MazeModel
+  maze.Maze o-- maze.ABox : arrival
+  maze.Maze o-- maze.DBox : departure
+  maze.Maze o-- maze.MFactory : mfactory
+  maze.Maze o-- graph.ShortestPaths : shortestPaths
+  maze.Maze .up.|> fr.tp.maze.model.MazeModel
+  maze.Maze .up.|> graph.Distance
+  maze.Maze .up.|> graph.Graph
+  maze.Maze o-- maze.ABox : arrival
+  maze.Maze o-- maze.DBox : departure
+  maze.Maze o-- maze.MFactory : mfactory
+  maze.Maze o-- graph.ShortestPaths : shortestPaths
+  maze.WBox -up-|> maze.MBox
+  maze.WBox -up-|> maze.MBox
+  maze.ui.AbstractBoxTypeRadioButton .up.|> java.awt.event.ActionListener
+  maze.ui.AbstractBoxTypeRadioButton -up-|> javax.swing.JRadioButton
+  maze.ui.AbstractBoxTypeRadioButton o-- maze.ui.MazePanel : mazePanel
+  maze.ui.ArrivalBoxButton .up.|> java.awt.event.ActionListener
+  maze.ui.ArrivalBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
+  maze.ui.BoxMouseAdapter -up-|> java.awt.event.MouseAdapter
+  maze.ui.BoxMouseAdapter o-- maze.ui.BoxPanel : boxPanel
+  maze.ui.BoxPanel -up-|> javax.swing.JPanel
+  maze.ui.BoxPanel o-- maze.model.MazeModel : mazeModel
+  maze.ui.ChooserButtonGroup -up-|> javax.swing.JPanel
+  maze.ui.ClearMazeMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.ClearMazeMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.ClearMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.ClearShortestPathButton .up.|> java.awt.event.ActionListener
+  maze.ui.ClearShortestPathButton -up-|> javax.swing.JButton
+  maze.ui.ClearShortestPathButton o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.DepartureBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
+  maze.ui.DrawingMenuBar -up-|> javax.swing.JMenuBar
+  maze.ui.EmptyBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
+  maze.ui.FileMenu -up-|> javax.swing.JMenu
+  maze.ui.InformationMazeMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.InformationMazeMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.InformationMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.MazeEditor .up.|> maze.model.ModelObserver
+  maze.ui.MazeEditor -up-|> javax.swing.JFrame
+  maze.ui.MazeEditor o-- maze.model.MazeModel : maze
+  maze.ui.MazeEditor o-- maze.ui.RootPanel : rootPanel
+  maze.ui.MazeMenu -up-|> javax.swing.JMenu
+  maze.ui.MazePanel -up-|> javax.swing.JPanel
+  maze.ui.MazePanel o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.MazePanel o-- maze.ui.AbstractBoxTypeRadioButton : selectedBoxTypeButton
+  maze.ui.NewMazeMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.NewMazeMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.NewMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.OpenFileMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.OpenFileMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.OpenFileMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.QuitMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.QuitMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.QuitMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.RootPanel -up-|> javax.swing.JPanel
+  maze.ui.RootPanel o-- maze.ui.ChooserButtonGroup : chooserButtonGroup
+  maze.ui.RootPanel o-- maze.ui.MazePanel : mazePanel
+  maze.ui.SaveAsMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.SaveAsMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.SaveAsMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.SaveMenuItem .up.|> java.awt.event.ActionListener
+  maze.ui.SaveMenuItem -up-|> javax.swing.JMenuItem
+  maze.ui.SaveMenuItem o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.SolveMazeButton .up.|> java.awt.event.ActionListener
+  maze.ui.SolveMazeButton -up-|> javax.swing.JButton
+  maze.ui.SolveMazeButton o-- maze.ui.MazeEditor : mazeEditor
+  maze.ui.WallBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
