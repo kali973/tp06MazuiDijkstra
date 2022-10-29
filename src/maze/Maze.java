@@ -172,7 +172,7 @@ public class Maze implements Graph, MazeModel, Distance {
             }
         }
 
-        for (int i = 1; i <= this.length - 1; i++) { // right side
+        for (int i = 1; i <= this.length - 1; i++) {
             if ((X == this.length) && (Y == i)) {
                 if (!(maze[X][i] instanceof WBox)) {
                     SuccVertex.add((Vertex) maze[X][Y - 1]);
@@ -195,7 +195,7 @@ public class Maze implements Graph, MazeModel, Distance {
             }
         }
         return SuccVertex;
-    } // fin getSuccessors
+    }
 
     @Override
     public int getWidth() {
@@ -335,10 +335,7 @@ public class Maze implements Graph, MazeModel, Distance {
 
     @Override
     public boolean removeObserver(ModelObserver observer) {
-
-
         return observers.remove(observer);
-        // return false;
     }
 
     protected void notifyObservers() {

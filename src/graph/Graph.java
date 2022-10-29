@@ -4,10 +4,10 @@ import java.util.Set;
 
 public interface Graph {
 
-    Set<Vertex> getVertexes(); //avoir un sommet
+    Set<Vertex> getVertexes();
 
     Vertex getVertex(String label);
 
-    Set<Vertex> getSuccessors(Vertex vertex); //avoir les voisins des sommets
+    Set<Vertex> getSuccessors(Vertex vertex);
 }
 	

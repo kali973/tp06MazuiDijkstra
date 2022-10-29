@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example.telecom</groupId>
-    <artifactId>tp06Mazeui</artifactId>
+    <artifactId>tp06MazuiDijkstra</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <build>
         <plugins>
@@ -70,7 +70,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <name>tp06Mazeui</name>
+    <name>tp06MazuiDijkstra</name>
     <description>Telecom Paris Premier programme HelloWorld</description>
     <properties>
         <java.version>11</java.version>

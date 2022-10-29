@@ -33,18 +33,7 @@ public class OpenFileMenuItem extends JMenuItem implements ActionListener {
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = chooser.getSelectedFile();
             System.out.println("You chose to open this file: " + file.getName());
-//	        try {
-//				int[] numberOfRowsAndColumnsInFile = Maze.numberOfRowsAndColumnsOfFile(file);
-//				int numberOfRows = numberOfRowsAndColumnsInFile[0];
-//				int numberOfColumns = numberOfRowsAndColumnsInFile[1];
-//				Maze newMaze = new Maze(numberOfRows, numberOfColumns, drawingMaze);
-//				newMaze.initFromTextFile(file);
 
-            //drawingMaze.setMaze(newMaze);
-//			} 
-//	    	catch(Exception e) {
-//				JOptionPane.showMessageDialog(drawingMaze, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-//			}
         }
     }
 }

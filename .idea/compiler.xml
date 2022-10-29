@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tp06Mazui" />
+        <module name="tp06MazuiDijkstra" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="tp06Mazui" target="1.8" />
+      <module name="tp06MazuiDijkstra" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

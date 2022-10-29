@@ -29,12 +29,8 @@ public class InformationMazeMenuItem extends JMenuItem implements ActionListener
         String messageDimension = "This maze has dimension : " + Integer.toString(numberOfRows) + " x " + Integer.toString(numberOfColumns);
         int numberOfBoxes = mazeEditor.getMaze().getNumberOfBoxes();
         String messageNumberOfBoxes = "This maze contains " + Integer.toString(numberOfBoxes) + " boxes with this distribution: ";
-        //int[] numberOfBoxesByType = drawingMaze.getMaze().getNumberOfBoxesByType();
-//		String messageABox = Integer.toString(numberOfBoxesByType[0]) + " arrival boxe(s).";
-//		String messageDBox = Integer.toString(numberOfBoxesByType[1]) + " departure boxe(s).";
-//		String messageEBox = Integer.toString(numberOfBoxesByType[2]) + " empty boxe(s).";
-//		String messageWBox = Integer.toString(numberOfBoxesByType[3]) + " wall boxe(s).";
-        String[] messageArray = {messageDimension, messageNumberOfBoxes/*, messageABox, messageDBox, messageEBox, messageWBox*/};
+
+        String[] messageArray = {messageDimension, messageNumberOfBoxes};
 
         JOptionPane.showMessageDialog(mazeEditor,
                 messageArray,
