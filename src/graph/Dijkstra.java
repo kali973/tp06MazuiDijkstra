@@ -50,13 +50,12 @@ public class Dijkstra {
         minDistance.setMinDistance(startVertex, 0);
 
         for (Vertex vertex : graph.getVertexes()) {
-            if (!startVertex.equals(vertex)) {
+            if (!startVertex.equals(vertex) && pivotVertex != null) {
                 minDistance.setMinDistance(vertex, Integer.MAX_VALUE);
             }
         }
 
-
-        while (!processedVertexes.contains(endVertex)) {
+        while (!processedVertexes.contains(endVertex) && pivotVertex != null) {
             for (Vertex succVertex : pivotVertex.getSuccessors())
                 if (!processedVertexes.contains(succVertex)) {
                     int currentDistance = minDistance.getMinDistance(pivotVertex) + distance.getDistance(pivotVertex, succVertex);
@@ -71,7 +70,6 @@ public class Dijkstra {
             pivotVertex = minDistance.getMinDistanceVertex(processedVertexes, graph.getVertexes());
             processedVertexes.add(pivotVertex);
         }
-
         return shortestPaths;
     }
 }

@@ -205,6 +205,9 @@ title __UI's Class Diagram__\n
   namespace maze {
     namespace ui {
       class maze.ui.OpenFileMenuItem {
+          {static} + height : int
+          {static} + width : int
+          - repertoireCourant : File
           + OpenFileMenuItem()
           + actionPerformed()
       }
@@ -235,6 +238,7 @@ title __UI's Class Diagram__\n
   namespace maze {
     namespace ui {
       class maze.ui.SaveAsMenuItem {
+          - repertoireCourant : File
           + SaveAsMenuItem()
           + actionPerformed()
       }

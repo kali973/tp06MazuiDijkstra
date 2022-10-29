@@ -514,6 +514,14 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   }
   
 
+  namespace maze {
+    namespace eadingException {
+      class mazeReadingException.MazeReadingException {
+      }
+    }
+  }
+  
+
   graph.impl.BasicEdge o-- graph.Vertex : vertex1
   graph.impl.BasicEdge o-- graph.Vertex : vertex2
   graph.impl.BasicEdge o-- graph.Vertex : vertex1
@@ -538,11 +546,11 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   maze.DBox -up-|> maze.MBox
   maze.EBox -up-|> maze.MBox
   maze.EBox -up-|> maze.MBox
-  maze.MBox .up.|> graph.Vertex
-  maze.MBox .up.|> maze.model.MazeBoxModel
-  maze.MBox o-- maze.Maze : maze
   maze.MBox .up.|> fr.tp.maze.model.MazeBoxModel
   maze.MBox .up.|> graph.Vertex
+  maze.MBox o-- maze.Maze : maze
+  maze.MBox .up.|> graph.Vertex
+  maze.MBox .up.|> maze.model.MazeBoxModel
   maze.MBox o-- maze.Maze : maze
   maze.MFactory .up.|> maze.model.MazeFactory
   maze.MFactory .up.|> fr.tp.maze.model.MazeFactory

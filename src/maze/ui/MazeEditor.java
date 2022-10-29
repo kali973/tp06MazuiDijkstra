@@ -138,7 +138,6 @@ public class MazeEditor extends JFrame implements ModelObserver {
         } catch (final Exception ex) {
             JOptionPane.showMessageDialog(this, "Error when solving",
                     "Error", JOptionPane.ERROR_MESSAGE);
-
         }
     }
 }

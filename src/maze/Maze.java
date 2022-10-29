@@ -90,7 +90,6 @@ public class Maze implements Graph, MazeModel, Distance {
         boolean fix;
 
         if ((X == 0) && (Y == 0)) {
-            MBox closeBox = maze[X + 1][Y];
             if (!(maze[X + 1][Y] instanceof WBox)) {
                 SuccVertex.add((Vertex) maze[X + 1][Y]);
             }
@@ -436,6 +435,7 @@ public class Maze implements Graph, MazeModel, Distance {
                 }
             }
         }
+        notifyObservers();
         return maze;
     }
 

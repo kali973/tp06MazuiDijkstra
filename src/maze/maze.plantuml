@@ -6,6 +6,7 @@ title __MAZE's Class Diagram__\n
     class maze.ABox {
         + ABox()
         + isArrival()
+        + writeCharTo()
     }
   }
   
@@ -14,6 +15,7 @@ title __MAZE's Class Diagram__\n
     class maze.DBox {
         + DBox()
         + isDeparture()
+        + writeCharTo()
     }
   }
   
@@ -23,6 +25,7 @@ title __MAZE's Class Diagram__\n
         + EBox()
         + isEmpty()
         + toString()
+        + writeCharTo()
     }
   }
   
@@ -61,6 +64,7 @@ title __MAZE's Class Diagram__\n
   namespace maze {
     class maze.Maze {
         ~ maze : MBox[][]
+        - bufferRead : BufferedReader
         - length : int
         - observers : Set<ModelObserver>
         - width : int
@@ -84,7 +88,9 @@ title __MAZE's Class Diagram__\n
         + getWidth()
         + getarrival()
         + getshortestPaths()
+        + initFromTextFile()
         + removeObserver()
+        + saveToTextFile()
         + solve()
         + validate()
         # notifyObservers()
@@ -96,6 +102,7 @@ title __MAZE's Class Diagram__\n
     class maze.WBox {
         + WBox()
         + isWall()
+        + writeCharTo()
     }
   }
   
