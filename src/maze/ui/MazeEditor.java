@@ -108,9 +108,8 @@ public class MazeEditor extends JFrame implements ModelObserver {
         if (isModified()) {
             final int response = JOptionPane.showOptionDialog(this, "Maze is not saved. Save it?", "Quit Application",
                     JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
-            switch (response) {
-                case JOptionPane.CANCEL_OPTION:
-                    return false;
+            if (response == JOptionPane.CANCEL_OPTION) {
+                return false;
             }
         }
 

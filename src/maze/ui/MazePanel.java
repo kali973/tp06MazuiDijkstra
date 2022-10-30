@@ -17,7 +17,7 @@ public class MazePanel extends JPanel {
 
     private final MazeEditor mazeEditor;
 
-    private BoxPanel[][] boxPanels;
+    private final BoxPanel[][] boxPanels;
 
     private AbstractBoxTypeRadioButton selectedBoxTypeButton;
 
