@@ -6,6 +6,8 @@ title __IMPL's Class Diagram__\n
     namespace impl {
       class graph.impl.BasicEdge {
           - distance : int
+          - vertex1 : Vertex
+          - vertex2 : Vertex
           + BasicEdge()
           + getDistance()
           + getVertex1()
@@ -59,6 +61,7 @@ title __IMPL's Class Diagram__\n
   namespace graph {
     namespace impl {
       class graph.impl.BasicVertex {
+          - graph : Graph
           - name : String
           + BasicVertex()
           + getLabel()
@@ -80,14 +83,11 @@ title __IMPL's Class Diagram__\n
   }
   
 
-  graph.impl.BasicEdge o-- graph.Vertex : vertex1
-  graph.impl.BasicEdge o-- graph.Vertex : vertex2
   graph.impl.BasicGraph .up.|> graph.Distance
   graph.impl.BasicGraph .up.|> graph.Graph
   graph.impl.BasicMinDistance .up.|> graph.MinDistance
   graph.impl.BasicShortestPaths .up.|> graph.ShortestPaths
   graph.impl.BasicVertex .up.|> graph.Vertex
-  graph.impl.BasicVertex o-- graph.Graph : graph
   graph.impl.BasicVertexesSet .up.|> graph.ProcessedVertexesSet
 
 

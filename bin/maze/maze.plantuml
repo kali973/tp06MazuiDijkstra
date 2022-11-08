@@ -31,6 +31,7 @@ title __MAZE's Class Diagram__\n
     abstract class maze.MBox {
         - X : int
         - Y : int
+        - maze : Maze
         + MBox()
         + belongsToShortestPath()
         + getLabel()
@@ -62,8 +63,12 @@ title __MAZE's Class Diagram__\n
   namespace maze {
     class maze.Maze {
         ~ maze : MBox[][]
+        - arrival : ABox
+        - departure : DBox
         - length : int
+        - mfactory : MFactory
         - observers : Set<ModelObserver>
+        - shortestPaths : ShortestPaths
         - width : int
         + Maze()
         + addObserver()
@@ -117,21 +122,12 @@ title __MAZE's Class Diagram__\n
   }
   
 
-  maze.ABox -up-|> maze.MBox
-  maze.DBox -up-|> maze.MBox
-  maze.EBox -up-|> maze.MBox
   maze.MBox .up.|> fr.tp.maze.model.MazeBoxModel
   maze.MBox .up.|> graph.Vertex
-  maze.MBox o-- maze.Maze : maze
   maze.MFactory .up.|> fr.tp.maze.model.MazeFactory
   maze.Maze .up.|> fr.tp.maze.model.MazeModel
   maze.Maze .up.|> graph.Distance
   maze.Maze .up.|> graph.Graph
-  maze.Maze o-- maze.ABox : arrival
-  maze.Maze o-- maze.DBox : departure
-  maze.Maze o-- maze.MFactory : mfactory
-  maze.Maze o-- graph.ShortestPaths : shortestPaths
-  maze.WBox -up-|> maze.MBox
 
 
 right footer

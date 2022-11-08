@@ -2,8 +2,320 @@
 
 title __TP06MAZUIDIJKSTRA's Class Diagram__\n
 
-  namespace graph {
-    class graph.Dijkstra {
+  namespace com.example.telecom.paris.maze.graph {
+    class com.example.telecom.paris.maze.graph.Dijkstra {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    interface com.example.telecom.paris.maze.graph.Distance {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    interface com.example.telecom.paris.maze.graph.Graph {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    interface com.example.telecom.paris.maze.graph.MinDistance {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    class com.example.telecom.paris.maze.graph.NotAdjacentVerticesException {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    interface com.example.telecom.paris.maze.graph.ProcessedVertexesSet {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    interface com.example.telecom.paris.maze.graph.ShortestPaths {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    interface com.example.telecom.paris.maze.graph.Vertex {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    namespace impl {
+      class com.example.telecom.paris.maze.graph.impl.BasicEdge {
+      }
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    namespace impl {
+      class com.example.telecom.paris.maze.graph.impl.BasicGraph {
+      }
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    namespace impl {
+      class com.example.telecom.paris.maze.graph.impl.BasicMinDistance {
+      }
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    namespace impl {
+      class com.example.telecom.paris.maze.graph.impl.BasicShortestPaths {
+      }
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    namespace impl {
+      class com.example.telecom.paris.maze.graph.impl.BasicVertex {
+      }
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.graph {
+    namespace impl {
+      class com.example.telecom.paris.maze.graph.impl.BasicVertexesSet {
+      }
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.mazeReadingException {
+    class com.example.telecom.paris.maze.mazeReadingException.MazeReadingException {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.model {
+    interface com.example.telecom.paris.maze.model.MazeBoxModel {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.model {
+    interface com.example.telecom.paris.maze.model.MazeFactory {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.model {
+    interface com.example.telecom.paris.maze.model.MazeModel {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.model {
+    interface com.example.telecom.paris.maze.model.ModelObserver {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.services {
+    class com.example.telecom.paris.maze.services.ABox {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.services {
+    class com.example.telecom.paris.maze.services.DBox {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.services {
+    class com.example.telecom.paris.maze.services.EBox {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.services {
+    class com.example.telecom.paris.maze.services.Labyrinthe {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.services {
+    abstract class com.example.telecom.paris.maze.services.MBox {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.services {
+    class com.example.telecom.paris.maze.services.MFactory {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.services {
+    class com.example.telecom.paris.maze.services.Maze {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.services {
+    class com.example.telecom.paris.maze.services.WBox {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    abstract class com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.ArrivalBoxButton {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.BoxMouseAdapter {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.BoxPanel {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.ChooserButtonGroup {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.ClearMazeMenuItem {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.ClearShortestPathButton {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.DepartureBoxButton {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.DrawingMenuBar {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.EmptyBoxButton {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.FileMenu {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.InformationMazeMenuItem {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.MazeEditor {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.MazeMenu {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.MazePanel {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.MusicTest {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.NewMazeMenuItem {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.OpenFileMenuItem {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.QuitMenuItem {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.RootPanel {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.SaveAsMenuItem {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.SaveMenuItem {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.SolveMazeButton {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.WallBoxButton {
     }
   }
   
@@ -21,18 +333,6 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   
 
   namespace graph {
-    interface graph.Distance {
-    }
-  }
-  
-
-  namespace graph {
-    interface graph.Graph {
-    }
-  }
-  
-
-  namespace graph {
     interface graph.Graph {
     }
   }
@@ -40,24 +340,6 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
 
   namespace graph {
     interface graph.MinDistance {
-    }
-  }
-  
-
-  namespace graph {
-    interface graph.MinDistance {
-    }
-  }
-  
-
-  namespace graph {
-    class graph.NotAdjacentVerticesException {
-    }
-  }
-  
-
-  namespace graph {
-    interface graph.ProcessedVertexesSet {
     }
   }
   
@@ -75,18 +357,6 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   
 
   namespace graph {
-    interface graph.ShortestPaths {
-    }
-  }
-  
-
-  namespace graph {
-    interface graph.Vertex {
-    }
-  }
-  
-
-  namespace graph {
     interface graph.Vertex {
     }
   }
@@ -95,22 +365,6 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   namespace graph {
     namespace impl {
       class graph.impl.BasicEdge {
-      }
-    }
-  }
-  
-
-  namespace graph {
-    namespace impl {
-      class graph.impl.BasicEdge {
-      }
-    }
-  }
-  
-
-  namespace graph {
-    namespace impl {
-      class graph.impl.BasicGraph {
       }
     }
   }
@@ -134,31 +388,7 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
 
   namespace graph {
     namespace impl {
-      class graph.impl.BasicMinDistance {
-      }
-    }
-  }
-  
-
-  namespace graph {
-    namespace impl {
       class graph.impl.BasicShortestPaths {
-      }
-    }
-  }
-  
-
-  namespace graph {
-    namespace impl {
-      class graph.impl.BasicShortestPaths {
-      }
-    }
-  }
-  
-
-  namespace graph {
-    namespace impl {
-      class graph.impl.BasicVertex {
       }
     }
   }
@@ -180,28 +410,8 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   }
   
 
-  namespace graph {
-    namespace impl {
-      class graph.impl.BasicVertexesSet {
-      }
-    }
-  }
-  
-
   namespace maze {
     class maze.ABox {
-    }
-  }
-  
-
-  namespace maze {
-    class maze.ABox {
-    }
-  }
-  
-
-  namespace maze {
-    class maze.DBox {
     }
   }
   
@@ -219,18 +429,6 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   
 
   namespace maze {
-    class maze.EBox {
-    }
-  }
-  
-
-  namespace maze {
-    abstract class maze.MBox {
-    }
-  }
-  
-
-  namespace maze {
     abstract class maze.MBox {
     }
   }
@@ -238,18 +436,6 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
 
   namespace maze {
     class maze.MFactory {
-    }
-  }
-  
-
-  namespace maze {
-    class maze.MFactory {
-    }
-  }
-  
-
-  namespace maze {
-    class maze.Maze {
     }
   }
   
@@ -273,356 +459,100 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   
 
   namespace maze {
-    class maze.WBox {
-    }
-  }
-  
-
-  namespace maze {
     class maze.main {
     }
   }
   
 
-  namespace maze {
-    class maze.main {
-    }
-  }
-  
-
-  namespace maze {
-    namespace model {
-      interface maze.model.MazeBoxModel {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace model {
-      interface maze.model.MazeFactory {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace model {
-      interface maze.model.MazeModel {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace model {
-      interface maze.model.ModelObserver {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      abstract class maze.ui.AbstractBoxTypeRadioButton {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.ArrivalBoxButton {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.BoxMouseAdapter {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.BoxPanel {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.ChooserButtonGroup {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.ClearMazeMenuItem {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.ClearShortestPathButton {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.DepartureBoxButton {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.DrawingMenuBar {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.EmptyBoxButton {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.FileMenu {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.InformationMazeMenuItem {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.MazeEditor {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.MazeMenu {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.MazePanel {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.MusicTest {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.NewMazeMenuItem {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.OpenFileMenuItem {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.QuitMenuItem {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.RootPanel {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.SaveAsMenuItem {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.SaveMenuItem {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.SolveMazeButton {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace ui {
-      class maze.ui.WallBoxButton {
-      }
-    }
-  }
-  
-
-  namespace maze {
-    namespace eadingException {
-      class mazeReadingException.MazeReadingException {
-      }
-    }
-  }
-  
-
-  graph.impl.BasicEdge o-- graph.Vertex : vertex1
-  graph.impl.BasicEdge o-- graph.Vertex : vertex2
-  graph.impl.BasicEdge o-- graph.Vertex : vertex1
-  graph.impl.BasicEdge o-- graph.Vertex : vertex2
-  graph.impl.BasicGraph .up.|> graph.Distance
-  graph.impl.BasicGraph .up.|> graph.Graph
+  com.example.telecom.paris.maze.graph.impl.BasicEdge o-- com.example.telecom.paris.maze.graph.Vertex : vertex1
+  com.example.telecom.paris.maze.graph.impl.BasicEdge o-- com.example.telecom.paris.maze.graph.Vertex : vertex2
+  com.example.telecom.paris.maze.graph.impl.BasicGraph .up.|> com.example.telecom.paris.maze.graph.Distance
+  com.example.telecom.paris.maze.graph.impl.BasicGraph .up.|> com.example.telecom.paris.maze.graph.Graph
+  com.example.telecom.paris.maze.graph.impl.BasicMinDistance .up.|> com.example.telecom.paris.maze.graph.MinDistance
+  com.example.telecom.paris.maze.graph.impl.BasicShortestPaths .up.|> com.example.telecom.paris.maze.graph.ShortestPaths
+  com.example.telecom.paris.maze.graph.impl.BasicVertex .up.|> com.example.telecom.paris.maze.graph.Vertex
+  com.example.telecom.paris.maze.graph.impl.BasicVertex o-- com.example.telecom.paris.maze.graph.Graph : graph
+  com.example.telecom.paris.maze.graph.impl.BasicVertexesSet .up.|> com.example.telecom.paris.maze.graph.ProcessedVertexesSet
+  com.example.telecom.paris.maze.services.ABox -up-|> com.example.telecom.paris.maze.services.MBox
+  com.example.telecom.paris.maze.services.DBox -up-|> com.example.telecom.paris.maze.services.MBox
+  com.example.telecom.paris.maze.services.EBox -up-|> com.example.telecom.paris.maze.services.MBox
+  com.example.telecom.paris.maze.services.MBox .up.|> com.example.telecom.paris.maze.graph.Vertex
+  com.example.telecom.paris.maze.services.MBox .up.|> com.example.telecom.paris.maze.model.MazeBoxModel
+  com.example.telecom.paris.maze.services.MBox o-- com.example.telecom.paris.maze.services.Maze : maze
+  com.example.telecom.paris.maze.services.MFactory .up.|> com.example.telecom.paris.maze.model.MazeFactory
+  com.example.telecom.paris.maze.services.Maze .up.|> com.example.telecom.paris.maze.graph.Distance
+  com.example.telecom.paris.maze.services.Maze .up.|> com.example.telecom.paris.maze.graph.Graph
+  com.example.telecom.paris.maze.services.Maze .up.|> com.example.telecom.paris.maze.model.MazeModel
+  com.example.telecom.paris.maze.services.Maze o-- com.example.telecom.paris.maze.services.ABox : arrival
+  com.example.telecom.paris.maze.services.Maze o-- com.example.telecom.paris.maze.services.DBox : departure
+  com.example.telecom.paris.maze.services.Maze o-- com.example.telecom.paris.maze.services.MFactory : mfactory
+  com.example.telecom.paris.maze.services.Maze o-- com.example.telecom.paris.maze.graph.ShortestPaths : shortestPaths
+  com.example.telecom.paris.maze.services.WBox -up-|> com.example.telecom.paris.maze.services.MBox
+  com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton -up-|> javax.swing.JRadioButton
+  com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton o-- com.example.telecom.paris.maze.ui.MazePanel : mazePanel
+  com.example.telecom.paris.maze.ui.ArrivalBoxButton .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.ArrivalBoxButton -up-|> com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton
+  com.example.telecom.paris.maze.ui.BoxMouseAdapter -up-|> java.awt.event.MouseAdapter
+  com.example.telecom.paris.maze.ui.BoxMouseAdapter o-- com.example.telecom.paris.maze.ui.BoxPanel : boxPanel
+  com.example.telecom.paris.maze.ui.BoxPanel -up-|> javax.swing.JPanel
+  com.example.telecom.paris.maze.ui.BoxPanel o-- com.example.telecom.paris.maze.model.MazeModel : mazeModel
+  com.example.telecom.paris.maze.ui.ChooserButtonGroup -up-|> javax.swing.JPanel
+  com.example.telecom.paris.maze.ui.ClearMazeMenuItem .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.ClearMazeMenuItem -up-|> javax.swing.JMenuItem
+  com.example.telecom.paris.maze.ui.ClearMazeMenuItem o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.ClearShortestPathButton .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.ClearShortestPathButton -up-|> javax.swing.JButton
+  com.example.telecom.paris.maze.ui.ClearShortestPathButton o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.DepartureBoxButton -up-|> com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton
+  com.example.telecom.paris.maze.ui.DrawingMenuBar -up-|> javax.swing.JMenuBar
+  com.example.telecom.paris.maze.ui.EmptyBoxButton -up-|> com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton
+  com.example.telecom.paris.maze.ui.FileMenu -up-|> javax.swing.JMenu
+  com.example.telecom.paris.maze.ui.InformationMazeMenuItem .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.InformationMazeMenuItem -up-|> javax.swing.JMenuItem
+  com.example.telecom.paris.maze.ui.InformationMazeMenuItem o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.MazeEditor .up.|> com.example.telecom.paris.maze.model.ModelObserver
+  com.example.telecom.paris.maze.ui.MazeEditor -up-|> javax.swing.JFrame
+  com.example.telecom.paris.maze.ui.MazeEditor o-- com.example.telecom.paris.maze.model.MazeModel : maze
+  com.example.telecom.paris.maze.ui.MazeEditor o-- com.example.telecom.paris.maze.ui.RootPanel : rootPanel
+  com.example.telecom.paris.maze.ui.MazeMenu -up-|> javax.swing.JMenu
+  com.example.telecom.paris.maze.ui.MazePanel -up-|> javax.swing.JPanel
+  com.example.telecom.paris.maze.ui.MazePanel o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.MazePanel o-- com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton : selectedBoxTypeButton
+  com.example.telecom.paris.maze.ui.NewMazeMenuItem .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.NewMazeMenuItem -up-|> javax.swing.JMenuItem
+  com.example.telecom.paris.maze.ui.NewMazeMenuItem o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.OpenFileMenuItem .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.OpenFileMenuItem -up-|> javax.swing.JMenuItem
+  com.example.telecom.paris.maze.ui.OpenFileMenuItem o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.QuitMenuItem .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.QuitMenuItem -up-|> javax.swing.JMenuItem
+  com.example.telecom.paris.maze.ui.QuitMenuItem o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.RootPanel -up-|> javax.swing.JPanel
+  com.example.telecom.paris.maze.ui.RootPanel o-- com.example.telecom.paris.maze.ui.ChooserButtonGroup : chooserButtonGroup
+  com.example.telecom.paris.maze.ui.RootPanel o-- com.example.telecom.paris.maze.ui.MazePanel : mazePanel
+  com.example.telecom.paris.maze.ui.SaveAsMenuItem .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.SaveAsMenuItem -up-|> javax.swing.JMenuItem
+  com.example.telecom.paris.maze.ui.SaveAsMenuItem o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.SaveMenuItem .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.SaveMenuItem -up-|> javax.swing.JMenuItem
+  com.example.telecom.paris.maze.ui.SaveMenuItem o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.SolveMazeButton .up.|> java.awt.event.ActionListener
+  com.example.telecom.paris.maze.ui.SolveMazeButton -up-|> javax.swing.JButton
+  com.example.telecom.paris.maze.ui.SolveMazeButton o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
+  com.example.telecom.paris.maze.ui.WallBoxButton -up-|> com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton
   graph.impl.BasicGraph .up.|> graph.Distance
   graph.impl.BasicGraph .up.|> graph.Graph
   graph.impl.BasicMinDistance .up.|> graph.MinDistance
-  graph.impl.BasicMinDistance .up.|> graph.MinDistance
-  graph.impl.BasicShortestPaths .up.|> graph.ShortestPaths
   graph.impl.BasicShortestPaths .up.|> graph.ShortestPaths
   graph.impl.BasicVertex .up.|> graph.Vertex
-  graph.impl.BasicVertex o-- graph.Graph : graph
-  graph.impl.BasicVertex .up.|> graph.Vertex
-  graph.impl.BasicVertex o-- graph.Graph : graph
   graph.impl.BasicVertexesSet .up.|> graph.ProcessedVertexesSet
-  graph.impl.BasicVertexesSet .up.|> graph.ProcessedVertexesSet
-  maze.ABox -up-|> maze.MBox
-  maze.ABox -up-|> maze.MBox
-  maze.DBox -up-|> maze.MBox
-  maze.DBox -up-|> maze.MBox
-  maze.EBox -up-|> maze.MBox
-  maze.EBox -up-|> maze.MBox
   maze.MBox .up.|> fr.tp.maze.model.MazeBoxModel
   maze.MBox .up.|> graph.Vertex
-  maze.MBox o-- maze.Maze : maze
-  maze.MBox .up.|> graph.Vertex
-  maze.MBox .up.|> maze.model.MazeBoxModel
-  maze.MBox o-- maze.Maze : maze
-  maze.MFactory .up.|> maze.model.MazeFactory
   maze.MFactory .up.|> fr.tp.maze.model.MazeFactory
-  maze.Maze .up.|> graph.Distance
-  maze.Maze .up.|> graph.Graph
-  maze.Maze .up.|> maze.model.MazeModel
-  maze.Maze o-- maze.ABox : arrival
-  maze.Maze o-- maze.DBox : departure
-  maze.Maze o-- maze.MFactory : mfactory
-  maze.Maze o-- graph.ShortestPaths : shortestPaths
   maze.Maze .up.|> fr.tp.maze.model.MazeModel
   maze.Maze .up.|> graph.Distance
   maze.Maze .up.|> graph.Graph
-  maze.Maze o-- maze.ABox : arrival
-  maze.Maze o-- maze.DBox : departure
-  maze.Maze o-- maze.MFactory : mfactory
-  maze.Maze o-- graph.ShortestPaths : shortestPaths
-  maze.WBox -up-|> maze.MBox
-  maze.WBox -up-|> maze.MBox
-  maze.ui.AbstractBoxTypeRadioButton .up.|> java.awt.event.ActionListener
-  maze.ui.AbstractBoxTypeRadioButton -up-|> javax.swing.JRadioButton
-  maze.ui.AbstractBoxTypeRadioButton o-- maze.ui.MazePanel : mazePanel
-  maze.ui.ArrivalBoxButton .up.|> java.awt.event.ActionListener
-  maze.ui.ArrivalBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
-  maze.ui.BoxMouseAdapter -up-|> java.awt.event.MouseAdapter
-  maze.ui.BoxMouseAdapter o-- maze.ui.BoxPanel : boxPanel
-  maze.ui.BoxPanel -up-|> javax.swing.JPanel
-  maze.ui.BoxPanel o-- maze.model.MazeModel : mazeModel
-  maze.ui.ChooserButtonGroup -up-|> javax.swing.JPanel
-  maze.ui.ClearMazeMenuItem .up.|> java.awt.event.ActionListener
-  maze.ui.ClearMazeMenuItem -up-|> javax.swing.JMenuItem
-  maze.ui.ClearMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.ClearShortestPathButton .up.|> java.awt.event.ActionListener
-  maze.ui.ClearShortestPathButton -up-|> javax.swing.JButton
-  maze.ui.ClearShortestPathButton o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.DepartureBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
-  maze.ui.DrawingMenuBar -up-|> javax.swing.JMenuBar
-  maze.ui.EmptyBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
-  maze.ui.FileMenu -up-|> javax.swing.JMenu
-  maze.ui.InformationMazeMenuItem .up.|> java.awt.event.ActionListener
-  maze.ui.InformationMazeMenuItem -up-|> javax.swing.JMenuItem
-  maze.ui.InformationMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.MazeEditor .up.|> maze.model.ModelObserver
-  maze.ui.MazeEditor -up-|> javax.swing.JFrame
-  maze.ui.MazeEditor o-- maze.model.MazeModel : maze
-  maze.ui.MazeEditor o-- maze.ui.RootPanel : rootPanel
-  maze.ui.MazeMenu -up-|> javax.swing.JMenu
-  maze.ui.MazePanel -up-|> javax.swing.JPanel
-  maze.ui.MazePanel o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.MazePanel o-- maze.ui.AbstractBoxTypeRadioButton : selectedBoxTypeButton
-  maze.ui.NewMazeMenuItem .up.|> java.awt.event.ActionListener
-  maze.ui.NewMazeMenuItem -up-|> javax.swing.JMenuItem
-  maze.ui.NewMazeMenuItem o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.OpenFileMenuItem .up.|> java.awt.event.ActionListener
-  maze.ui.OpenFileMenuItem -up-|> javax.swing.JMenuItem
-  maze.ui.OpenFileMenuItem o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.QuitMenuItem .up.|> java.awt.event.ActionListener
-  maze.ui.QuitMenuItem -up-|> javax.swing.JMenuItem
-  maze.ui.QuitMenuItem o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.RootPanel -up-|> javax.swing.JPanel
-  maze.ui.RootPanel o-- maze.ui.ChooserButtonGroup : chooserButtonGroup
-  maze.ui.RootPanel o-- maze.ui.MazePanel : mazePanel
-  maze.ui.SaveAsMenuItem .up.|> java.awt.event.ActionListener
-  maze.ui.SaveAsMenuItem -up-|> javax.swing.JMenuItem
-  maze.ui.SaveAsMenuItem o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.SaveMenuItem .up.|> java.awt.event.ActionListener
-  maze.ui.SaveMenuItem -up-|> javax.swing.JMenuItem
-  maze.ui.SaveMenuItem o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.SolveMazeButton .up.|> java.awt.event.ActionListener
-  maze.ui.SolveMazeButton -up-|> javax.swing.JButton
-  maze.ui.SolveMazeButton o-- maze.ui.MazeEditor : mazeEditor
-  maze.ui.WallBoxButton -up-|> maze.ui.AbstractBoxTypeRadioButton
 
 
 right footer
