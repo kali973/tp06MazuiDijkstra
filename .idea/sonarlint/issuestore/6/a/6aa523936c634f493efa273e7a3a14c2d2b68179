@@ -1,0 +1,149 @@
+
+t
+java:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ê…ŸŠıÿÿÿÿ
+o
+java:S2293T"YReplace the type specification in this constructor call with the diamond operator ("<>").(ïŞ¨‡
+E
+java:S1066\"/Merge this if statement with the enclosing one.(¢¡¬Á
+J
+java:S1066b"/Merge this if statement with the enclosing one.(öÔí¼ıÿÿÿÿ
+E
+java:S1066h"/Merge this if statement with the enclosing one.(¢¡¬Á
+E
+java:S1066n"/Merge this if statement with the enclosing one.(İßÿ
+J
+java:S1066t"/Merge this if statement with the enclosing one.(öÔí¼ıÿÿÿÿ
+J
+java:S1066z"/Merge this if statement with the enclosing one.(ìÙÚ“ÿÿÿÿÿ
+K
+java:S1066€"/Merge this if statement with the enclosing one.(ìÙÚ“ÿÿÿÿÿ
+F
+java:S1066†"/Merge this if statement with the enclosing one.(İßÿ
+K
+java:S1066"/Merge this if statement with the enclosing one.(©òü¨ÿÿÿÿÿ
+F
+java:S1066—"/Merge this if statement with the enclosing one.(•ë¨ã
+K
+java:S1066¡"/Merge this if statement with the enclosing one.(©òü¨ÿÿÿÿÿ
+F
+java:S1066«"/Merge this if statement with the enclosing one.(•ë¨ã
+K
+java:S1066¶"/Merge this if statement with the enclosing one.(¿ğ†”ùÿÿÿÿ
+k	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯¬ıüüÿÿÿÿ
+f	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïŞ¨‡
+k	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŒÁõúÿÿÿÿ
+f	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¾ı
+l	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯¬ıüüÿÿÿÿ
+(
+java:S1700"Rename field "maze"(…Äˆ}
+
+java:S1186œ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(â‰÷´ûÿÿÿÿ
+t
+java:S1450"YRemove the "bufferRead" field and declare it as a local variable in the relevant methods.(˜ø¥ÿÿÿÿÿ
+?
+java:S1905;")Remove this unnecessary cast to "Vertex".(ü‡÷ª
+7
+java:S1116I"Remove this empty statement.(áÁéıÿÿÿÿÿ
+Q
+java:S1751K"6Remove this "return" statement or make it conditional.(£Œ­›üÿÿÿÿ
+D
+java:S1905K")Remove this unnecessary cast to "Vertex".(£Œ­›üÿÿÿÿ
+i
+java:S3776R"SRefactor this method to reduce its Cognitive Complexity from 103 to the 15 allowed.(ğ¢‘¥
+S
+java:S1854"7Remove this useless assignment to local variable "fix".(·Ş±°şÿÿÿÿ
+S
+java:S1854˜"7Remove this useless assignment to local variable "fix".(Åßßûÿÿÿÿ
+S
+java:S1854š"7Remove this useless assignment to local variable "fix".(¢–¬ıÿÿÿÿ
+N
+java:S1854·"7Remove this useless assignment to local variable "fix".(Û„çã
+S
+java:S1854¸"7Remove this useless assignment to local variable "fix".(ô”Ÿİùÿÿÿÿ
+S
+java:S1854¹"7Remove this useless assignment to local variable "fix".(¤³µÇùÿÿÿÿ
+S
+java:S1854º"7Remove this useless assignment to local variable "fix".(™÷şåşÿÿÿÿ
+>
+java:S1481Y"(Remove this unused "fix" local variable.(áè”æ
+D
+java:S1905]")Remove this unnecessary cast to "Vertex".(ı±Œ‹øÿÿÿÿ
+?
+java:S1905c")Remove this unnecessary cast to "Vertex".(İØÁ
+D
+java:S1905i")Remove this unnecessary cast to "Vertex".(ı±Œ‹øÿÿÿÿ
+D
+java:S1905o")Remove this unnecessary cast to "Vertex".(ØË¡…şÿÿÿÿ
+?
+java:S1905u")Remove this unnecessary cast to "Vertex".(İØÁ
+?
+java:S1905{")Remove this unnecessary cast to "Vertex".(ÆâÁ­
+@
+java:S1905")Remove this unnecessary cast to "Vertex".(ÆâÁ­
+@
+java:S1905‡")Remove this unnecessary cast to "Vertex".(Ô‚½Å
+@
+java:S1905")Remove this unnecessary cast to "Vertex".(ÆâÁ­
+E
+java:S1905")Remove this unnecessary cast to "Vertex".(·Ş±°şÿÿÿÿ
+E
+java:S1905")Remove this unnecessary cast to "Vertex".(·Ş±°şÿÿÿÿ
+@
+java:S1905")Remove this unnecessary cast to "Vertex".(İØÁ
+E
+java:S1905˜")Remove this unnecessary cast to "Vertex".(Åßßûÿÿÿÿ
+E
+java:S1905˜")Remove this unnecessary cast to "Vertex".(Åßßûÿÿÿÿ
+E
+java:S1905™")Remove this unnecessary cast to "Vertex".(ı±Œ‹øÿÿÿÿ
+E
+java:S1905š")Remove this unnecessary cast to "Vertex".(¢–¬ıÿÿÿÿ
+E
+java:S1905š")Remove this unnecessary cast to "Vertex".(¢–¬ıÿÿÿÿ
+@
+java:S1905¢")Remove this unnecessary cast to "Vertex".(ÆâÁ­
+E
+java:S1905£")Remove this unnecessary cast to "Vertex".(ØË¡…şÿÿÿÿ
+E
+java:S1905¤")Remove this unnecessary cast to "Vertex".(ı±Œ‹øÿÿÿÿ
+E
+java:S1905¬")Remove this unnecessary cast to "Vertex".(ØË¡…şÿÿÿÿ
+@
+java:S1905­")Remove this unnecessary cast to "Vertex".(ÆâÁ­
+@
+java:S1905®")Remove this unnecessary cast to "Vertex".(İØÁ
+@
+java:S1905·")Remove this unnecessary cast to "Vertex".(Û„çã
+@
+java:S1905·")Remove this unnecessary cast to "Vertex".(Û„çã
+E
+java:S1905¸")Remove this unnecessary cast to "Vertex".(ô”Ÿİùÿÿÿÿ
+E
+java:S1905¸")Remove this unnecessary cast to "Vertex".(ô”Ÿİùÿÿÿÿ
+E
+java:S1905¹")Remove this unnecessary cast to "Vertex".(¤³µÇùÿÿÿÿ
+E
+java:S1905¹")Remove this unnecessary cast to "Vertex".(¤³µÇùÿÿÿÿ
+E
+java:S1905º")Remove this unnecessary cast to "Vertex".(™÷şåşÿÿÿÿ
+E
+java:S1905º")Remove this unnecessary cast to "Vertex".(™÷şåşÿÿÿÿ
+F
+java:S1481†"/Remove this unused "departures" local variable.(öë
+D
+java:S1481‡"-Remove this unused "arrivals" local variable.(ıÊşÜ
+I
+java:S1168“"+Return an empty collection instead of null.(¥¹ï8şÊÇ0
+J
+java:S1905¤".Remove this unnecessary cast to "MazeFactory".(‚¤×‚üÿÿÿÿ
+T	java:S106É"9Replace this use of System.out or System.err by a logger.(¼·‘½üÿÿÿÿ
+O	java:S106Í"9Replace this use of System.out or System.err by a logger.(–îûâ
+O	java:S106Ò"9Replace this use of System.out or System.err by a logger.(ÓÄŒ™
+O	java:S106Ó"9Replace this use of System.out or System.err by a logger.(Ç¡«…
+?	java:S108Ø")Either remove or fill this block of code.(”ı¾
+F
+java:S2093º"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+I
+java:S1135™"2Complete the task associated to this TODO comment.(á±Õ’
+R
+java:S2696«"6Make the enclosing method "static" or remove this set.(¡Ê°ıÿÿÿÿ

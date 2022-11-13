@@ -1,0 +1,29 @@
+
+r	java:S116"XRename this field "BOX_DEPARTURE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øü®Šüÿÿÿÿ
+p	java:S116"VRename this field "BOX_ARRIVAL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤©û»øÿÿÿÿ
+h	java:S116"SRename this field "BOX_WALL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È½û¬
+h	java:S116"TRename this field "BOX_EMPTY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…¦éF
+<
+java:S1170"!Make this final field static too.(Øü®Šüÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(¤©û»øÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(È½û¬
+6
+java:S1170"!Make this final field static too.(…¦éF
+O
+java:S11724"-Remove this unused method parameter "mazeId".(ïÜñ ûÿÿÿÿ8ÙòÇ0
+M
+java:S11356"2Complete the task associated to this TODO comment.(€£‰·ûÿÿÿÿ
+M
+java:S1135N"2Complete the task associated to this TODO comment.(€£‰·ûÿÿÿÿ
+d
+java:S4042T"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(Æ©Ý®
+L
+java:S1068"1Remove this unused "BOX_DEPARTURE" private field.(Øü®Šüÿÿÿÿ
+J
+java:S1068"/Remove this unused "BOX_ARRIVAL" private field.(¤©û»øÿÿÿÿ
+B
+java:S1068",Remove this unused "BOX_WALL" private field.(È½û¬
+B
+java:S1068"-Remove this unused "BOX_EMPTY" private field.(…¦éF

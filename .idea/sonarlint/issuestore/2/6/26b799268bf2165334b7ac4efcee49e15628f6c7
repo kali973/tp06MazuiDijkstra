@@ -1,0 +1,21 @@
+
+]
+java:S1192¥"FDefine a constant instead of duplicating this literal "Error" 3 times.(Şó­œ
+g
+java:S1301…"KReplace this "switch" statement by "if" statements to increase readability.(§Í‡­ùÿÿÿÿ
+’
+java:S41651"pRemove this useless assignment; "persistenceManager" already holds the assigned value along all execution paths.(…ì“êûÿÿÿÿ8¥ééŠÇ0
+B
+java:S1948"&Make "maze" transient or serializable.(ß‘şh8“¶òŒÇ0
+P
+java:S1948"4Make "persistenceManager" transient or serializable.(¹°ğa8œ¶òŒÇ0
+e
+java:S3252*"OUse static access with "javax.swing.WindowConstants" for "DO_NOTHING_ON_CLOSE".(’¡¿
+=	java:S131…""Add a default case to this switch.(§Í‡­ùÿÿÿÿ
+?	java:S108³")Either remove or fill this block of code.(Ã÷‘
+T
+java:S1117º"8Rename "maze" which hides the field declared at line 17.(“Â†üÿÿÿÿ
+]
+java:S1117ß"FRename "persistenceManager" which hides the field declared at line 19.(ÀÉÉã
+Q
+java:S16561"/Remove or correct this useless self-assignment.(…ì“êûÿÿÿÿ8—·òŒÇ0
