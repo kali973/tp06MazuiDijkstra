@@ -1,4 +1,0 @@
-EEDE
-WESE
-EWSE
-ASSE

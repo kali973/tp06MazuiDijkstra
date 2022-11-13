@@ -3,6 +3,7 @@ package com.example.telecom.paris.maze.services;
 import com.example.telecom.paris.maze.graph.Vertex;
 import com.example.telecom.paris.maze.model.MazeBoxModel;
 
+import java.io.PrintWriter;
 import java.util.Set;
 
 
@@ -36,71 +37,73 @@ public abstract class MBox implements Vertex, MazeBoxModel {
 
     @Override
     public Set<Vertex> getSuccessors() {
-        // TODO Auto-generated method stub
+
         return maze.getSuccessors(this);
     }
 
     @Override
     public String getLabel() {
-        // TODO Auto-generated method stub
+
         return "(" + X + "," + Y + ")";
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
+
         return false;
     }
 
     @Override
     public void setEmpty() {
-        // TODO Auto-generated method stub
+
         maze.createEmptyBox(X, Y);
 
     }
 
     @Override
     public boolean isWall() {
-        // TODO Auto-generated method stub
+
         return false;
     }
 
     @Override
     public void setWall() {
-        // TODO Auto-generated method stub
+
         maze.createWallBox(X, Y);
 
     }
 
     @Override
     public boolean isDeparture() {
-        // TODO Auto-generated method stub
+
         return false;
     }
 
     @Override
     public void setDeparture() {
-        // TODO Auto-generated method stub
+
         maze.createDepartureBox(X, Y);
 
     }
 
     @Override
     public boolean isArrival() {
-        // TODO Auto-generated method stub
+
         return false;
     }
 
     @Override
     public void setArrival() {
-        // TODO Auto-generated method stub
+
         maze.createArrivalBox(X, Y);
     }
 
     @Override
     public boolean belongsToShortestPath() {
-        // TODO Auto-generated method stub
+
         return this.maze.getshortestPaths().getShortestPath(maze.getDepartures(),
                 maze.getarrival()).contains(this);
     }
+
+    public abstract void writeCharTo(PrintWriter pw);
 }

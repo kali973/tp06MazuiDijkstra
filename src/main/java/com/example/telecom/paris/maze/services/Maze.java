@@ -13,7 +13,6 @@ import lombok.SneakyThrows;
 
 import javax.swing.*;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -52,7 +51,7 @@ public class Maze implements Graph, MazeModel, Distance {
 
     @Override
     public Set<Vertex> getVertexes() {
-        // TODO Auto-generated method stub
+
 
         Set<Vertex> listVertex = new HashSet<Vertex>();
         for (int i = 0; i < this.length; i++) {
@@ -67,7 +66,7 @@ public class Maze implements Graph, MazeModel, Distance {
 
     @Override
     public Vertex getVertex(String label) {
-        // TODO Auto-generated method stub
+
 
         for (int i = 0; i < this.length; i++) {
             for (int j = 0; j < this.width; ) {
@@ -81,7 +80,7 @@ public class Maze implements Graph, MazeModel, Distance {
 
     @Override
     public Set<Vertex> getSuccessors(Vertex vertex) {
-        // TODO Auto-generated method stub
+
         Set<Vertex> SuccVertex = new HashSet<Vertex>();
         MBox box = (MBox) vertex;
 
@@ -194,19 +193,19 @@ public class Maze implements Graph, MazeModel, Distance {
 
     @Override
     public int getWidth() {
-        // TODO Auto-generated method stub
+
         return this.width;
     }
 
     @Override
     public int getHeigth() {
-        // TODO Auto-generated method stub
+
         return this.length;
     }
 
     @Override
     public MazeBoxModel getMazeBox(int rowIndex, int colIndex) {
-        // TODO Auto-generated method stub
+
 
         return this.maze[rowIndex][colIndex];
 
@@ -214,13 +213,13 @@ public class Maze implements Graph, MazeModel, Distance {
 
     @Override
     public int getNumberOfBoxes() {
-        // TODO Auto-generated method stub
+
         return (this.length * this.width);
     }
 
     @Override
     public void clearMaze() {
-        // TODO Auto-generated method stub
+
         for (int i = 0; i < this.length; i++) {
             for (int j = 0; j < this.width; j++) {
 
@@ -234,7 +233,7 @@ public class Maze implements Graph, MazeModel, Distance {
 
     @Override
     public void clearShortestPath() {
-        // TODO Auto-generated method stub
+
 
         this.shortestPaths = new BasicShortestPaths();
 
@@ -242,7 +241,7 @@ public class Maze implements Graph, MazeModel, Distance {
     }
 
     public boolean solve() {
-        // TODO Auto-generated method stub
+
 
         this.shortestPaths = Dijkstra.findShortestPaths(this, this.departure, this.arrival, new BasicVertexesSet(),
                 new BasicMinDistance(), this);
@@ -259,8 +258,7 @@ public class Maze implements Graph, MazeModel, Distance {
 
     @Override
     public List<String> validate() {
-        // TODO Auto-generated method stub
-        List<String> msgErreur = new ArrayList<>();
+
         int departures = 0;
         int arrivals = 0;
         for (int i = 0; i < this.length; i++) {
@@ -274,47 +272,22 @@ public class Maze implements Graph, MazeModel, Distance {
                 }
             }
         }
+        return null;
+    }
 
-        if (departures == 1 && arrivals == 1) {
-            return msgErreur;
-        }
-        if (departures > 1 && arrivals == 1) {
-            msgErreur.add("Renseigner 1 seule départ");
-        }
-        if (departures == 1 && arrivals > 1) {
-            msgErreur.add("Renseigner 1 seule arrivée");
-        }
+    @Override
+    public String getId() {
+        return null;
+    }
 
-        if (departures > 1 && arrivals > 1) {
-            msgErreur.add("Renseigner 1 départ et 1 arrivée");
-        }
+    @Override
+    public void setId(String mazeId) {
 
-        if (departures == 0 && arrivals == 0) {
-            msgErreur.add("Renseigner 1 départ et 1 arrivée");
-        }
-
-        if (departures == 0 && arrivals > 1) {
-            msgErreur.add("Renseigner 1 départ et 1 arrivée");
-        }
-
-        if (departures > 1 && arrivals == 0) {
-            msgErreur.add("Renseigner 1 départ et 1 arrivée");
-        }
-
-        if (departures == 1 && arrivals == 0) {
-            msgErreur.add("Renseigner 1 arrivée");
-        }
-
-        if (departures == 0 && arrivals == 1) {
-            msgErreur.add("Renseigner 1 depart");
-        }
-
-        return msgErreur;
     }
 
     @Override
     public MazeFactory getMazeFactory() {
-        // TODO Auto-generated method stub
+
 
         return (MazeFactory) this.mfactory;
     }
@@ -373,9 +346,72 @@ public class Maze implements Graph, MazeModel, Distance {
         }
     }
 
-    @SneakyThrows
+
+    protected void notifyObservers() {
+        for (final ModelObserver observer : observers) {
+            observer.modelStateChanged();
+
+        }
+
+    }
+
+    public void createEmptyBox(int i, int j) {
+        this.maze[i][j] = new EBox(i, j, this);
+
+        notifyObservers();
+    }
+
+    public void createWallBox(int i, int j) {
+        this.maze[i][j] = new WBox(i, j, this);
+
+        notifyObservers();
+    }
+
+    public void createDepartureBox(int i, int j) {
+        this.departure = new DBox(i, j, this);
+        this.maze[i][j] = departure;
+
+        notifyObservers();
+
+    }
+
+    public void createArrivalBox(int i, int j) {
+        this.arrival = new ABox(i, j, this);
+        this.maze[i][j] = arrival;
+        notifyObservers();
+
+    }
+
     @Override
-    public MBox[][] initFromTextFile(File file) {
+    public int getDistance(Vertex vertex1, Vertex vertex2) {
+
+        if (vertex1.getSuccessors().contains(vertex2)) {
+            notifyObservers();
+            return 1;
+        } else {
+            notifyObservers();
+            return 0;
+        }
+    }
+
+    public ShortestPaths getshortestPaths() {
+
+        return shortestPaths;
+    }
+
+    public DBox getDepartures() {
+
+        return departure;
+
+    }
+
+    public ABox getarrival() {
+        // TODO Auto-generated method
+        return arrival;
+    }
+
+    @SneakyThrows
+    public void initFromTextFile(File file) {
         FileInputStream fstream = new FileInputStream(file);
         bufferRead = new BufferedReader(new InputStreamReader(fstream));
 
@@ -436,69 +472,5 @@ public class Maze implements Graph, MazeModel, Distance {
             }
         }
         notifyObservers();
-        return maze;
-    }
-
-    protected void notifyObservers() {
-        for (final ModelObserver observer : observers) {
-            observer.modelStateChanged();
-
-        }
-
-    }
-
-    public void createEmptyBox(int i, int j) {
-        this.maze[i][j] = new EBox(i, j, this);
-
-        notifyObservers();
-    }
-
-    public void createWallBox(int i, int j) {
-        this.maze[i][j] = new WBox(i, j, this);
-
-        notifyObservers();
-    }
-
-    public void createDepartureBox(int i, int j) {
-        this.departure = new DBox(i, j, this);
-        this.maze[i][j] = departure;
-
-        notifyObservers();
-
-    }
-
-    public void createArrivalBox(int i, int j) {
-        this.arrival = new ABox(i, j, this);
-        this.maze[i][j] = arrival;
-        notifyObservers();
-
-    }
-
-    @Override
-    public int getDistance(Vertex vertex1, Vertex vertex2) {
-        // TODO Auto-generated method stub
-        if (vertex1.getSuccessors().contains(vertex2)) {
-            notifyObservers();
-            return 1;
-        } else {
-            notifyObservers();
-            return 0;
-        }
-    }
-
-    public ShortestPaths getshortestPaths() {
-        // TODO Auto-generated method stub
-        return shortestPaths;
-    }
-
-    public DBox getDepartures() {
-        // TODO Auto-generated method stub
-        return departure;
-
-    }
-
-    public ABox getarrival() {
-        // TODO Auto-generated method
-        return arrival;
     }
 }

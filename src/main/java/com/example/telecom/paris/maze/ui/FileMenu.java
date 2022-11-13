@@ -2,20 +2,29 @@ package com.example.telecom.paris.maze.ui;
 
 import javax.swing.*;
 
-/**
- * This menu manages everything that has to do with saving the com.example.telecom.paris.maze or initializing it from a file.
- *
- * @author Idris DELSOL
- */
 @SuppressWarnings("serial")
 public class FileMenu extends JMenu {
 
-    public FileMenu(MazeEditor drawingMaze) {
+    private final SaveMenuItem saveMenuItem;
+
+    private final SaveAsMenuItem saveAsMenuItem;
+
+    public FileMenu(MazeEditor mazeEditor) {
         super("File");
 
-        add(new QuitMenuItem(drawingMaze));
-        add(new SaveMenuItem(drawingMaze));
-        add(new SaveAsMenuItem(drawingMaze));
-        add(new OpenFileMenuItem(drawingMaze));
+        add(new QuitMenuItem(mazeEditor));
+
+        saveMenuItem = new SaveMenuItem(mazeEditor);
+        add(saveMenuItem);
+
+        saveAsMenuItem = new SaveAsMenuItem(mazeEditor);
+        add(saveAsMenuItem);
+
+        add(new OpenFileMenuItem(mazeEditor));
+    }
+
+    public void notifyForUpdate() {
+        saveMenuItem.repaint();
+        saveAsMenuItem.repaint();
     }
 }

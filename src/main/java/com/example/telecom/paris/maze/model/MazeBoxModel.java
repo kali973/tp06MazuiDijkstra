@@ -1,9 +1,7 @@
 package com.example.telecom.paris.maze.model;
 
-import java.io.PrintWriter;
-
 /**
- * Interface providing various methods required for displaying a com.example.telecom.paris.maze box in a com.example.telecom.paris.maze editor.
+ * Interface providing various methods required for displaying a maze box in a maze editor.
  *
  * @author Dominique Blouin
  */
@@ -17,7 +15,7 @@ public interface MazeBoxModel {
     boolean isEmpty();
 
     /**
-     * Makes this com.example.telecom.paris.maze box an empty box (i.e. it can be traversed to be part of a path).
+     * Makes this maze box an empty box (i.e. it can be traversed to be part of a path).
      */
     void setEmpty();
 
@@ -29,7 +27,7 @@ public interface MazeBoxModel {
     boolean isWall();
 
     /**
-     * Makes this com.example.telecom.paris.maze box a wall box (i.e. it can not be traversed cannot be part of a path).
+     * Makes this maze box a wall box (i.e. it can not be traversed cannot be part of a path).
      */
     void setWall();
 
@@ -41,7 +39,7 @@ public interface MazeBoxModel {
     boolean isDeparture();
 
     /**
-     * Makes this com.example.telecom.paris.maze a departure box (i.e. it is the beginning box of a path).
+     * Makes this maze a departure box (i.e. it is the beginning box of a path).
      */
     void setDeparture();
 
@@ -53,16 +51,14 @@ public interface MazeBoxModel {
     boolean isArrival();
 
     /**
-     * Makes this com.example.telecom.paris.maze an arrival box (i.e. it is the end of a path).
+     * Makes this maze an arrival box (i.e. it is the end of a path).
      */
     void setArrival();
 
     /**
-     * Returns a <code>boolean</code> stating if this box belongs to the shortest path solving the com.example.telecom.paris.maze.
+     * Returns a <code>boolean</code> stating if this box belongs to the shortest path solving the maze.
      *
      * @return <code>true</code> if this box belongs to the shortest path, false otherwise.
      */
     boolean belongsToShortestPath();
-
-    void writeCharTo(PrintWriter pw);
 }

@@ -1,5 +1,6 @@
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/model/ModelObserver.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/MazePanel.java
+/root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/model/MazePersistenceManager.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/FileMenu.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/ClearShortestPathButton.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/DrawingMenuBar.java
@@ -17,6 +18,7 @@
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/ChooserButtonGroup.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/ClearMazeMenuItem.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/graph/Vertex.java
+/root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/FileMazePersistenceManager.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/services/WBox.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/services/Maze.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/graph/ShortestPaths.java
@@ -45,7 +47,6 @@
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/graph/impl/BasicShortestPaths.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/SaveAsMenuItem.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/services/MBox.java
-/root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/ui/MusicTest.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/graph/NotAdjacentVerticesException.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/graph/impl/BasicVertex.java
 /root/IdeaProjects/tp06MazuiDijkstra/src/main/java/com/example/telecom/paris/maze/services/MFactory.java

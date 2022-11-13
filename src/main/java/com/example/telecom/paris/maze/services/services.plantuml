@@ -57,6 +57,7 @@ title __SERVICES's Class Diagram__\n
         + setWall()
         + setX()
         + setY()
+        {abstract} + writeCharTo()
     }
   }
   
@@ -86,6 +87,7 @@ title __SERVICES's Class Diagram__\n
         + getDepartures()
         + getDistance()
         + getHeigth()
+        + getId()
         + getMazeBox()
         + getMazeFactory()
         + getNumberOfBoxes()
@@ -98,6 +100,7 @@ title __SERVICES's Class Diagram__\n
         + initFromTextFile()
         + removeObserver()
         + saveToTextFile()
+        + setId()
         + solve()
         + validate()
         # notifyObservers()

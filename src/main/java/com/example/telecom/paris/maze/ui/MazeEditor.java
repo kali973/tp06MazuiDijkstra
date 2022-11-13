@@ -1,20 +1,22 @@
 package com.example.telecom.paris.maze.ui;
 
-//import java.awt.Color;
-
 
 import com.example.telecom.paris.maze.model.MazeModel;
+import com.example.telecom.paris.maze.model.MazePersistenceManager;
 import com.example.telecom.paris.maze.model.ModelObserver;
 
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
+import java.util.List;
 
 @SuppressWarnings("serial")
 public class MazeEditor extends JFrame implements ModelObserver {
 
-
     private MazeModel maze;
+
+    private MazePersistenceManager persistenceManager;
 
     private RootPanel rootPanel;
 
@@ -25,7 +27,9 @@ public class MazeEditor extends JFrame implements ModelObserver {
     public MazeEditor(final MazeModel maze) {
         super("Maze Editor");
 
-        // Window menu bar creation
+        System.setProperty("org.apache.commons.collections.enableUnsafeSerialization", Boolean.TRUE.toString());
+
+        //Window menu bar creation
         setJMenuBar(new DrawingMenuBar(this));
 
         addWindowListener(new WindowAdapter() {
@@ -40,9 +44,9 @@ public class MazeEditor extends JFrame implements ModelObserver {
             }
         });
 
-        // By default, the com.example.telecom.paris.maze drawn when the user access the app will have a 10*10
-        // grid
+        //By default, the maze drawn when the user access the app will have a 10*10 grid
         setMaze(maze);
+        this.persistenceManager = persistenceManager;
         setModified(false);
         setEditing(false);
 
@@ -69,7 +73,15 @@ public class MazeEditor extends JFrame implements ModelObserver {
 
     @Override
     public final void modelStateChanged() {
+        setModified(true);
+
         rootPanel.notifyForUpdate();
+        getJMenuBar().notifyForUpdate();
+    }
+
+    @Override
+    public DrawingMenuBar getJMenuBar() {
+        return (DrawingMenuBar) super.getJMenuBar();
     }
 
     public final void newMaze() {
@@ -100,16 +112,29 @@ public class MazeEditor extends JFrame implements ModelObserver {
         repaint();
     }
 
+    public final MazePersistenceManager getPersistenceManager() {
+        return persistenceManager;
+    }
+
     public RootPanel getRootPanel() {
         return rootPanel;
     }
 
     private boolean handleModified() {
         if (isModified()) {
-            final int response = JOptionPane.showOptionDialog(this, "Maze is not saved. Save it?", "Quit Application",
-                    JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
-            if (response == JOptionPane.CANCEL_OPTION) {
-                return false;
+            final int response = JOptionPane.showOptionDialog(this,
+                    "Maze is not saved. Save it?",
+                    "Quit Application",
+                    JOptionPane.YES_NO_CANCEL_OPTION,
+                    JOptionPane.WARNING_MESSAGE,
+                    null,
+                    null,
+                    null);
+            switch (response) {
+                case JOptionPane.CANCEL_OPTION:
+                    return false;
+                case JOptionPane.YES_OPTION:
+                    persistMaze();
             }
         }
 
@@ -125,19 +150,78 @@ public class MazeEditor extends JFrame implements ModelObserver {
 
     protected void solveMaze() {
         final MazeModel model = getMaze();
-        setEditing(false);
 
-        try {
-            if (model.solve()) {
-                setModified(true);
-            } else {
-                JOptionPane.showMessageDialog(this, "There is no path from the departure box to the arrival box.",
-                        "Error", JOptionPane.ERROR_MESSAGE);
+        final List<String> errors = model.validate();
+
+        if (errors != null && !errors.isEmpty()) {
+            final StringBuilder errMessages = new StringBuilder();
+
+            for (final String message : errors) {
+                errMessages.append(message);
             }
-        } catch (final Exception ex) {
-            JOptionPane.showMessageDialog(this, "Error when solving",
-                    "Error", JOptionPane.ERROR_MESSAGE);
+
+            JOptionPane.showMessageDialog(this,
+                    errMessages,
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        } else {
+            setEditing(false);
+
+            try {
+                if (model.solve()) {
+                    setModified(true);
+                } else {
+                    JOptionPane.showMessageDialog(this,
+                            "There is no path from the departure box to the arrival box.",
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            } catch (final Exception ex) {
+
+            }
         }
     }
-}
 
+    protected void persistAsMaze() {
+        final MazeModel maze = getMaze();
+        final String currentId = maze.getId();
+
+        maze.setId(null);
+
+        try {
+            doPersistMaze();
+        } catch (final IOException ex) {
+            handleException(ex);
+
+            maze.setId(currentId);
+        }
+    }
+
+    private void handleException(final Exception ex) {
+        JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        ex.printStackTrace();
+    }
+
+    protected void readMaze() {
+        try {
+            setMaze(getPersistenceManager().read(null));
+        } catch (final IOException ex) {
+            handleException(ex);
+        }
+    }
+
+    protected void persistMaze() {
+        try {
+            doPersistMaze();
+        } catch (final IOException ex) {
+            handleException(ex);
+        }
+    }
+
+    private void doPersistMaze()
+            throws IOException {
+        final MazePersistenceManager persistenceManager = getPersistenceManager();
+
+        persistenceManager.persist(getMaze());
+    }
+}

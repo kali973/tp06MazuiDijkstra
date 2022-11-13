@@ -3,6 +3,7 @@ com/example/telecom/paris/maze/ui/QuitMenuItem.class
 com/example/telecom/paris/maze/graph/MinDistance.class
 com/example/telecom/paris/maze/ui/NewMazeMenuItem.class
 com/example/telecom/paris/maze/ui/FileMenu.class
+com/example/telecom/paris/maze/model/MazePersistenceManager.class
 com/example/telecom/paris/maze/services/WBox.class
 com/example/telecom/paris/maze/services/EBox.class
 com/example/telecom/paris/maze/ui/InformationMazeMenuItem.class
@@ -35,6 +36,7 @@ com/example/telecom/paris/maze/ui/OpenFileMenuItem.class
 com/example/telecom/paris/maze/graph/impl/BasicMinDistance.class
 com/example/telecom/paris/maze/graph/Vertex.class
 com/example/telecom/paris/maze/graph/impl/BasicShortestPaths.class
+com/example/telecom/paris/maze/ui/FileMazePersistenceManager.class
 com/example/telecom/paris/maze/ui/SaveMenuItem.class
 com/example/telecom/paris/maze/ui/ClearShortestPathButton.class
 com/example/telecom/paris/maze/ui/AbstractBoxTypeRadioButton.class
@@ -48,5 +50,4 @@ com/example/telecom/paris/maze/ui/RootPanel.class
 com/example/telecom/paris/maze/ui/SolveMazeButton.class
 com/example/telecom/paris/maze/ui/EmptyBoxButton.class
 com/example/telecom/paris/maze/model/MazeModel.class
-com/example/telecom/paris/maze/ui/MusicTest.class
 com/example/telecom/paris/maze/mazeReadingException/MazeReadingException.class

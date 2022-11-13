@@ -38,9 +38,12 @@ public class OpenFileMenuItem extends JMenuItem implements ActionListener {
         File file = null;
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             file = chooser.getSelectedFile();
-            System.out.println("You chose to open this file: " + file.getName());
+            System.out.println("Vous avez choisi ce fichier : " + file.getName());
         }
         mazeEditor.getMaze().initFromTextFile(file);
+        JFrame jFrame = new JFrame();
+        JOptionPane.showMessageDialog(jFrame, "Veuillez ressaisir le point de départ et d'arrivée");
+
     }
 }
 

@@ -13,7 +13,6 @@ title __MODEL's Class Diagram__\n
         {abstract} + setDeparture()
         {abstract} + setEmpty()
         {abstract} + setWall()
-        {abstract} + writeCharTo()
     }
   }
   
@@ -31,6 +30,7 @@ title __MODEL's Class Diagram__\n
         {abstract} + clearMaze()
         {abstract} + clearShortestPath()
         {abstract} + getHeigth()
+        {abstract} + getId()
         {abstract} + getMazeBox()
         {abstract} + getMazeFactory()
         {abstract} + getNumberOfBoxes()
@@ -38,8 +38,18 @@ title __MODEL's Class Diagram__\n
         {abstract} + initFromTextFile()
         {abstract} + removeObserver()
         {abstract} + saveToTextFile()
+        {abstract} + setId()
         {abstract} + solve()
         {abstract} + validate()
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.model {
+    interface com.example.telecom.paris.maze.model.MazePersistenceManager {
+        {abstract} + delete()
+        {abstract} + persist()
+        {abstract} + read()
     }
   }
   

@@ -123,6 +123,12 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   
 
   namespace com.example.telecom.paris.maze.model {
+    interface com.example.telecom.paris.maze.model.MazePersistenceManager {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.model {
     interface com.example.telecom.paris.maze.model.ModelObserver {
     }
   }
@@ -237,6 +243,12 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   
 
   namespace com.example.telecom.paris.maze.ui {
+    class com.example.telecom.paris.maze.ui.FileMazePersistenceManager {
+    }
+  }
+  
+
+  namespace com.example.telecom.paris.maze.ui {
     class com.example.telecom.paris.maze.ui.FileMenu {
     }
   }
@@ -262,12 +274,6 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
 
   namespace com.example.telecom.paris.maze.ui {
     class com.example.telecom.paris.maze.ui.MazePanel {
-    }
-  }
-  
-
-  namespace com.example.telecom.paris.maze.ui {
-    class com.example.telecom.paris.maze.ui.MusicTest {
     }
   }
   
@@ -506,14 +512,19 @@ title __TP06MAZUIDIJKSTRA's Class Diagram__\n
   com.example.telecom.paris.maze.ui.ClearShortestPathButton o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
   com.example.telecom.paris.maze.ui.DepartureBoxButton -up-|> com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton
   com.example.telecom.paris.maze.ui.DrawingMenuBar -up-|> javax.swing.JMenuBar
+  com.example.telecom.paris.maze.ui.DrawingMenuBar o-- com.example.telecom.paris.maze.ui.FileMenu : fileMenu
   com.example.telecom.paris.maze.ui.EmptyBoxButton -up-|> com.example.telecom.paris.maze.ui.AbstractBoxTypeRadioButton
+  com.example.telecom.paris.maze.ui.FileMazePersistenceManager .up.|> com.example.telecom.paris.maze.model.MazePersistenceManager
   com.example.telecom.paris.maze.ui.FileMenu -up-|> javax.swing.JMenu
+  com.example.telecom.paris.maze.ui.FileMenu o-- com.example.telecom.paris.maze.ui.SaveAsMenuItem : saveAsMenuItem
+  com.example.telecom.paris.maze.ui.FileMenu o-- com.example.telecom.paris.maze.ui.SaveMenuItem : saveMenuItem
   com.example.telecom.paris.maze.ui.InformationMazeMenuItem .up.|> java.awt.event.ActionListener
   com.example.telecom.paris.maze.ui.InformationMazeMenuItem -up-|> javax.swing.JMenuItem
   com.example.telecom.paris.maze.ui.InformationMazeMenuItem o-- com.example.telecom.paris.maze.ui.MazeEditor : mazeEditor
   com.example.telecom.paris.maze.ui.MazeEditor .up.|> com.example.telecom.paris.maze.model.ModelObserver
   com.example.telecom.paris.maze.ui.MazeEditor -up-|> javax.swing.JFrame
   com.example.telecom.paris.maze.ui.MazeEditor o-- com.example.telecom.paris.maze.model.MazeModel : maze
+  com.example.telecom.paris.maze.ui.MazeEditor o-- com.example.telecom.paris.maze.model.MazePersistenceManager : persistenceManager
   com.example.telecom.paris.maze.ui.MazeEditor o-- com.example.telecom.paris.maze.ui.RootPanel : rootPanel
   com.example.telecom.paris.maze.ui.MazeMenu -up-|> javax.swing.JMenu
   com.example.telecom.paris.maze.ui.MazePanel -up-|> javax.swing.JPanel

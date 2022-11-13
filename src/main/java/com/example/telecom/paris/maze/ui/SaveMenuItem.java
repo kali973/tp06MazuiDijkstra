@@ -40,7 +40,7 @@ public class SaveMenuItem extends JMenuItem implements ActionListener {
         int returnVal = chooser.showSaveDialog(mazeEditor);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = chooser.getSelectedFile();
-            System.out.println("You chose to open this file: " + file.getName());
+            System.out.println("Le fichier de sauvegarde est : " + file.getName());
             try {
                 mazeEditor.getMaze().saveToTextFile(file);
             } catch (Exception e) {

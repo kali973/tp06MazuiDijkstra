@@ -16,7 +16,7 @@ public class NewMazeMenuItem extends JMenuItem implements ActionListener {
     private final MazeEditor mazeEditor;
 
     public NewMazeMenuItem(MazeEditor drawingMaze) {
-        super("Create a new  com.example.telecom.paris.maze");
+        super("Create a new maze");
 
         this.mazeEditor = drawingMaze;
 
